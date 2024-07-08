@@ -1,0 +1,1184 @@
+@font-face {
+    font-family: "CustomFontone";
+    src: url("./font/Anderik.ttf");}
+    
+@font-face {
+    font-family: "CustomFontTwo";
+    src: url("/font/Popboy.ttf");
+}
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Lora:ital,wght@1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+  
+    width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    overflow: auto;
+    height: auto;
+    scroll-behavior: smooth;
+}
+
+.winner-container{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom,#fff,#000,#000,#000,#000,#000,#000,#000);
+}
+.winner-container h1{
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif, serif;
+    text-align: center;
+    color: black; 
+}
+
+.winner-container .winners-ticket{  
+    margin:30px 10px;
+    width: 80%;
+    height: auto;
+    display: flex;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.7);
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.winner-container .winners-ticket h1{
+    margin: 30px;
+    width: 90%;
+    padding: 5px 30px;
+    color: black;
+    background-color: #fd7905;
+    border-radius: 10px;
+}
+
+
+
+.winners-ticket .won{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.won .ticket{
+    width: 500px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) ;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+
+
+.Ticket-box{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+    background-color: white; 
+    
+}
+
+
+@keyframes openBox {
+
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 0;
+        
+    }
+}
+
+@keyframes closeBox {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+        
+    }
+    
+}
+
+.close{
+    cursor: pointer;
+    position: relative;
+    width: 100px;
+    height: 30px;
+    align-self: flex-end;
+    right: 100px;
+    display: flex;
+    border: 4px solid white;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.Ticket-box .inside-box{
+    width: 60%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);   
+
+}
+.Ticket-box .inside-box .search-field{
+    width: 100%;
+    height: 15%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.Ticket-box .inside-box .search-field select{
+    width: 180px;
+    height: 40px;
+    margin: 10px;
+    font-size: 14px;
+}
+  
+
+.Ticket-box .inside-box .search-field input{
+    width: 300px;
+    height: 40px;
+    border: none;
+    padding: 5px;
+    font-size: 13px;
+    
+}
+
+.Ticket-box .inside-box .search-field button{
+    width: 100px;
+    height: 40px;
+    margin-left: 10px;
+    color: black;
+    background-color: white;
+    border: none;
+    padding: 5px;
+    font-size: 13px;
+    
+}
+.Ticket-box .inside-box .box-contain-tickets{
+    width: 100%;
+    height: 80%;
+    
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-left: 40px;
+    
+    
+}
+
+ .ticket{
+    width: 95%;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) ;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+ .ticket .ticketsvalue{
+    width: 100%;
+    height: 180px;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.ticket .ticketowner span{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ticket .ticketno{
+    display: flex;
+
+}
+.ticket .sheetno{
+    display: flex;
+  
+}
+.ticket span{
+    font-size: 14px;
+    
+}
+ .ticket .ticketsvalue .row-one,.row-two,.row-three{
+    width: 95%;
+    height: 50px;
+   
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+ .ticket .row-one div,.row-two div,.row-three div{
+    width: 10%;
+    height: 45px;
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.container-one{
+    position: relative;
+    width: 100%;
+    display: flex;
+    grid-template-columns: 20% 80%;
+    min-height: 100vh; 
+    height: auto;
+    
+}
+.profile{
+    position: relative;
+    width: 300px;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    border-right: 1px solid black;
+    background-color: white;
+}
+.profile .logo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    border-bottom: 1px solid white;
+}
+.profile .logo img{
+    
+    width: 250px;
+   
+    
+}
+
+.section-one{
+    position: relative;
+    width: 90%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    
+}
+.random-no-box{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.random-no-box h3{
+    margin-top: 100px;
+}
+.ac-buttons{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.end-game h1{
+    font-size: 20px;
+}
+.random-no-box button{
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.random-no-box button:nth-child(2){
+    margin-top: 50px;
+    width: 150px;
+    height: 60px;
+    font-size: 24px;
+}
+
+.timeline-box{
+    position: relative;
+    width: 50%;
+    height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
+    background-color: white;
+}
+
+
+#gameInfo{
+    display: none;
+}
+
+.boxes{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr  ;
+    height: 90vh;
+    margin-top: 40px;
+    grid-column-gap:2fr;           
+    margin-left: 50px;
+    
+}
+
+.boxes div{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #F4F4F4  ;
+    
+}
+
+.about-game-box{
+    width: 30%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-detail{
+    width: 90%;
+    height: 30%;
+    border-radius: 20px 20px 0px 0px;
+    margin-top: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    background-color: black
+}
+.game-detail h3{
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px 2px 20px rgba(131, 131, 131, 0.76);
+}
+.game-detail .lists{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 50px;
+    
+}
+.game-detail .lists h1{
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 40px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.game-detail .lists  span{
+    font-size: 18px;
+    padding: 10px;
+    width: 150px;
+    margin-left: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+
+
+.winner-detail{
+    width: 90%;
+    height: 50%;
+    margin-top: 20px;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    background-color: black;
+}
+.winner-detail h3{
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px 2px 20px rgba(131, 131, 131, 0.76);
+}
+.winner-detail .winner-list{
+    width: 100%;
+    height: 100%;
+    height: auto;
+}
+.winner-detail .winner-list span{
+    color: #fd7905;
+}
+.winner-detail .winner-list h3:first-child{
+    margin-top: 10px;
+}
+.winner-detail .winner-list h3{
+    width: 400px;
+    
+    border-radius: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 18px;
+    padding: 15px;
+    color: white;
+    box-shadow: none;
+    margin-left: 40px;
+}
+
+
+.timeline-box .circle{
+    position: relative;
+    width: 60px;
+    margin: 10px;
+    min-height: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #fd7905;
+    box-shadow: 0px 0px 20px rgba(253,121,5,1);
+}
+
+@keyframes scaleupdown {
+
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}
+
+
+.pop-up-back{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    background: black;
+    background: radial-gradient(rgba(116, 116, 116, 0.8), rgba(3, 3, 4, 0.9));
+    z-index: -10;
+    visibility: hidden;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pop-up-back .pop-up-box{
+    width: 40%;
+    height: 60%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.pop-up-box h1{
+    font-family:"CustomFontone",Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    background: -webkit-linear-gradient(rgb(0, 15, 220), rgb(227, 5, 247));
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    animation: p 1s ease-in-out infinite;
+}
+
+@keyframes p {
+    0%,100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    
+}
+.pop-up-box h3{
+    position: relative;
+    font-size: 22px;
+    font-weight: lighter;
+    bottom: 30px;
+    
+}
+.win-image{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.win-image img{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    z-index: 0;
+    
+}
+
+svg{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    left: 50%;
+    opacity: 0;
+}
+
+@keyframes popup {
+    0%{
+        transform-origin: center;
+        transform: scale(0);
+    }
+    100%{
+        transform-origin: center;
+        transform: scale(1);
+    }
+    
+}
+
+@keyframes showStar {
+    0%{
+        opacity: 0;
+
+    }
+    50%{
+        transform: rotate(-15deg);
+        transform: scale(2);
+        
+        left: -50px;
+        opacity: 1;
+    }
+    100%{
+        transform: scale(3);
+        
+        left: -50px;
+        opacity: 0;
+
+    }
+    
+}
+@keyframes showStar3{
+    0%{
+        opacity: 0;
+
+    }
+    50%{
+        transform: rotate(15deg);
+        transform: scale(2);
+        left: 300px;
+        opacity: 1;
+    }
+    100%{
+        transform: scale(3);
+        left: 300px;
+        opacity: 0;
+
+    }
+    
+}
+@keyframes showStar1 {
+    0%{
+        opacity: 0;
+
+    }
+    50%{
+        transform: rotate(-15deg);
+        transform: scale(2);
+        top: -10px;
+        left: -50px;
+        opacity: 1;
+    }
+    100%{
+        transform: scale(3);
+        top: -10px;
+        left: -50px;
+        opacity: 0;
+
+    }
+    
+}
+@keyframes showStar2 {
+    0%{
+        opacity: 0;
+
+    }
+    50%{
+        transform: rotate(45deg);
+        transform: scale(2);
+        top: -10px;
+        left: 300px;
+        opacity: 1;
+    }
+    100%{
+        transform: scale(3);
+        top: -10px;
+        left: 300px;
+        opacity: 0;
+
+    }
+    
+}
+
+
+
+
+
+
+@keyframes shake {
+    0%,100%{
+        bottom: 0;
+        }
+    20%,40%,60%,80%{
+        transform-origin: 50% 100%;
+        transform: rotate(15deg);
+        bottom: 30px;
+    }
+    30%,50%,70%,90%{
+        transform-origin: 50% 100%;
+        transform: rotate(-15deg);
+        bottom: 30px;
+        
+    }
+    
+}
+
+.game-starting-box{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-start-count{
+    width: auto;
+    display:flex;
+}
+.game-start-count h1{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    
+}
+
+.game-starting-box .l-circle{
+    width: 200px;
+    height: 200px;
+    display: none;
+    border-radius: 100px;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: white;
+    animation: zoom-in-out 1s ease-in-out infinite;
+}
+.game-end-box{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -10;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-end-box .game-end-msg{
+    color: white;
+}
+
+.game-end-box button{
+    width: 100px;
+    height: 50px;
+    border: none;
+    margin-top: 20px;
+    background-color: #fd7905;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-end-box .winnerslist-box{
+    width: 90%;
+    height: 80%;
+    overflow-y: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.game-end-box .winnerslist-box .winners-names{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.game-end-box .winnerslist-box .winner-box{
+    width: 350px;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid black;
+}
+.game-end-box .winnerslist-box .winner-box h1{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #fd7905;
+    color: white;
+    animation: zoom-in-out 1s ease-in-out infinite;
+}
+@keyframes zoom-in-out {
+    0%,100%{
+        transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1);
+    }
+
+}
+
+.player-btns{
+    width: 90%; 
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.player-btns button{
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.player-btns #winner-box{
+    display: none;
+}
+.player-btns #Home-btn{
+    display: none;
+    background-color:#fd7905 ;
+    color: white;
+}
+
+@media screen and (max-width:780px) {
+
+    body{
+        overflow-y: scroll;
+        overflow-x:hidden;
+        height: auto;
+    }
+    .container-one{
+       display: flex;
+       flex-direction: column;
+       overflow-x: hidden;
+       
+    }
+
+    .player-btns{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .player-btns button{
+        width: 80px;
+        height: 40px;
+    }
+    .profile{
+        width: 100%;
+        height: auto;
+        display: flex;
+       
+    }
+    .profile .logo{
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       border-bottom: 1px solid white;
+    }
+    .profile .logo img{
+        margin-top: 20px;
+        width: 200px;
+        height: auto;
+    }
+    .random-no-box{
+        width: 100%;
+        height: 100%;
+        display: flex;    
+        flex-direction: column;
+        align-items: center;
+       
+    }
+   
+    .random-no-box h3{
+        margin-top: 10px;
+    }
+    .random-no-box button{
+      
+        height: 40px;
+        margin: 0;
+        
+    }
+    .random-no-box button:nth-child(2){
+        width: 100px;
+        height: 40px;
+        margin: 0;
+        font-size: 15px;
+       
+    }
+    .timeline-box{
+        width: 70%;
+        max-height: 60px;
+        margin-top: 10px;
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) inset;
+        background-color: white;
+    }
+
+    .game-start-count h1{
+        font-size: 18px;
+    }
+
+    .game-end-box{
+        height: 100%;
+    }
+
+    .game-end-box button{
+        width: 80px;
+        height: 30px;
+    }
+    .game-end-box .game-end-msg h1{
+        font-size: 18px;
+        
+    }
+
+    .game-end-box .winnerslist-box{
+        width: 90%;
+        height: 70%;
+    }
+    .game-end-box .winnerslist-box h1{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .game-end-box .winnerslist-box .winners-names{
+       
+        margin-top: 20px;
+        margin-bottom: 10px;
+       display: inline;
+       overflow-y: auto;
+       
+    }
+    .game-end-box .winnerslist-box .winners-names .winner-box{
+        width: 250px;
+        height: 100px;
+
+        justify-content: space-between;
+       
+    }
+    .game-end-box .winnerslist-box .winners-names .winner-box h1{
+        font-size: 16px;
+        margin-top: 0px;
+    }
+    .game-end-box .winnerslist-box .winners-names .winner-box h3{
+        font-size: 13px;
+    }
+    .section-one{
+        width: 100%;
+        min-height: 60vh;
+        height: auto;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .game-detail .lists  span{
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .boxes{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr  ;
+        height: 60vh;
+        column-gap: 5px;    
+        margin-left: 10px;
+       
+    }
+    .boxes div{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-size: 7px;
+        background-color: #F4F4F4   ;
+    }
+    #gameInfo{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .about-game-box{
+        position: absolute;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        display: none;
+        flex-direction: column;
+    
+    }
+    .ac-buttons{
+        
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    .end-game h1{
+        font-size: 20px;
+    }
+
+    .game-detail{
+        height: 200px;
+        margin-top: 10px;
+    }
+    .game-detail .lists h1{
+        font-size: 13px;
+        height: auto;
+        margin-left: 10px;
+        
+    }
+    .game-detail .lists{
+        margin-top: 0px;
+    }
+    
+
+    .winner-detail{
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+   
+    .winner-detail .winner-list h3:first-child{
+        margin-top: 5px;
+    }
+    .winner-detail .winner-list h3:last-child{
+        margin-bottom: 5px;
+    }
+    .winner-detail .winner-list h3{
+        width: 300px;
+        padding: 5px;
+        font-size: 13px;
+        margin-left: 10px;
+    
+    }
+    
+    .end-game{
+        width: 150px;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+    
+    
+ .timeline-box .circle{
+    position: relative;
+    min-width: 30px;
+    max-width: 30px;
+    min-height: 30px;
+    max-height: 30px;
+   margin: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.Ticket-box {
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+}
+.Ticket-box .inside-box{
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+.Ticket-box .inside-box .search-field{
+    width: 100%;
+    height: 15%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.Ticket-box .inside-box .search-field input{
+    width: 120px;
+    font-size: 11px;
+    margin: 4px;
+    
+    
+}
+.Ticket-box .inside-box .search-field button{
+    width: 50px;
+    font-size: 11px;
+    height: 40px;
+    margin: 4px;
+   
+    
+}
+
+.Ticket-box .inside-box .box-contain-tickets{
+    width: 90%;
+    height: 80%;
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+    
+}
+.Ticket-box .inside-box .search-field select{
+    width: 100px;
+    height: 40px;
+    margin: 4px;
+    font-size: 13px;
+}
+.pop-up-back .pop-up-box{
+    width: 90%;
+   
+    
+}
+.pop-up-box h1{
+    font-size: 25px;
+    letter-spacing: 10px;
+}
+.pop-up-box h3{
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+
+.winner-container{
+    margin-top: 40px;
+}
+.winner-container h1{
+    margin-top: 30px;
+    font-size: 16px;
+  
+}
+
+.winner-container .winners-ticket{
+    
+   
+    width: 90%;
+    min-height: 80%;
+    height: auto;
+   
+}
+
+.winner-container .winners-ticket h1{
+    margin: 30px;
+    width: 90%;
+  
+}
+
+
+
+.winners-ticket .won{
+    width: 90%;
+    height: auto;
+  
+   
+}
+
+.won .ticket{
+    width: 300px;
+    height: 200px;
+   
+}
+
+    
+}
+

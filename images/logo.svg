@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1829" height="479.546" viewBox="0 0 1829 479.546">
+  <g id="Group_12" data-name="Group 12" transform="translate(-54 -154)">
+    <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(54 155)" stroke="#707070" stroke-width="1">
+      <rect width="1829" height="253" rx="27" stroke="none"/>
+      <rect x="0.5" y="0.5" width="1828" height="252" rx="26.5" fill="none"/>
+    </g>
+    <text id="LUNGTA_TAMBOLA" data-name="LUNGDA TAMBOLA" transform="translate(76 361)" fill="#fff" stroke="#707070" stroke-width="1" font-size="208" font-family="SpaceRave, Space Rave"><tspan x="0" y="0">LUNGTA TAMBOLA</tspan></text>
+    <g id="Group_11" data-name="Group 11" transform="translate(116.792 93)">
+      <rect id="Rectangle_4" data-name="Rectangle 4" width="963" height="16" transform="translate(362.208 330)"/>
+      <g id="Group_1" data-name="Group 1" transform="translate(350.297 314.233)">
+        <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(44.406 24.176)" fill="#0019fe" stroke="#707070" stroke-width="1">
+          <rect width="155" height="202" stroke="none"/>
+          <rect x="0.5" y="0.5" width="154" height="201" fill="none"/>
+        </g>
+        
+      </g>
+      <g id="Group_2" data-name="Group 2" transform="translate(540.656 317.344)">
+        <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(31.048 21.065)" fill="#fff" stroke="#707070" stroke-width="1">
+          <rect width="155" height="202" stroke="none"/>
+          <rect x="0.5" y="0.5" width="154" height="201" fill="none"/>
+        </g>
+       
+      </g>
+      <g id="Group_3" data-name="Group 3" transform="translate(724.581 320.599)">
+        <g id="Path_1" data-name="Path 1" transform="translate(25.739 19.481)" fill="#ff3030">
+          <path d="M 4.016568183898926 199.9618988037109 L 0.5088828206062317 0.5248749256134033 L 162.7198028564453 0.5248749256134033 L 162.7198028564453 198.5535430908203 L 4.016568183898926 199.9618988037109 Z" stroke="none"/>
+          <path d="M 1.017730712890625 1.024871826171875 L 4.507736206054688 199.45751953125 L 162.2198028564453 198.0579528808594 L 162.2198028564453 1.024871826171875 L 1.017730712890625 1.024871826171875 M -1.52587890625e-05 0.024871826171875 L 163.2198028564453 0.024871826171875 L 163.2198028564453 199.0491333007813 L 3.52532958984375 200.4662780761719 L -1.52587890625e-05 0.024871826171875 Z" stroke="none" fill="#707070"/>
+        </g>
+       
+      </g>
+      <g id="Group_4" data-name="Group 4" transform="translate(924.394 327.698)">
+        <g id="Path_2" data-name="Path 2" transform="translate(13.156 10.382)" fill="#049b13">
+          <path d="M 162.7198028564453 199.9662780761719 L 4.016644954681396 199.9662780761719 L 0.5088828206062317 0.5248749256134033 L 162.7198028564453 0.5248749256134033 L 162.7198028564453 199.9662780761719 Z" stroke="none"/>
+          <path d="M 1.017730712890625 1.024871826171875 L 4.507888793945313 199.4662780761719 L 162.2198028564453 199.4662780761719 L 162.2198028564453 1.024871826171875 L 1.017730712890625 1.024871826171875 M -1.52587890625e-05 0.024871826171875 L 163.2198028564453 0.024871826171875 L 163.2198028564453 200.4662780761719 L 3.52532958984375 200.4662780761719 L -1.52587890625e-05 0.024871826171875 Z" stroke="none" fill="#707070"/>
+        </g>
+        
+      </g>
+      <g id="Group_5" data-name="Group 5" transform="translate(1118.046 334.631)">
+        <g id="Path_3" data-name="Path 3" transform="translate(6.793 5.449)" fill="#fff703">
+          <path d="M 4.016568183898926 199.9618988037109 L 0.5088828206062317 0.5248749256134033 L 162.7198028564453 0.5248749256134033 L 162.7198028564453 198.5535430908203 L 4.016568183898926 199.9618988037109 Z" stroke="none"/>
+          <path d="M 1.017730712890625 1.024871826171875 L 4.507736206054688 199.45751953125 L 162.2198028564453 198.0579528808594 L 162.2198028564453 1.024871826171875 L 1.017730712890625 1.024871826171875 M -1.52587890625e-05 0.024871826171875 L 163.2198028564453 0.024871826171875 L 163.2198028564453 199.0491333007813 L 3.52532958984375 200.4662780761719 L -1.52587890625e-05 0.024871826171875 Z" stroke="none" fill="#707070"/>
+        </g>
+       
+      </g>
+    </g>
+  </g>
+</svg>

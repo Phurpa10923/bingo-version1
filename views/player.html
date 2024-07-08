@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Game Page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../game-player.css">
+</head>
+<body>
+   
+    <template>
+        <div class="ticket">
+            <div class="ticketsvalue">
+                <div class="row-one">
+                    <div class="box-1"></div>
+                    <div class="box-2"></div>
+                    <div class="box-3"></div>
+                    <div class="box-4"></div>
+                    <div class="box-5"></div>
+                    <div class="box-6"></div>
+                    <div class="box-7"></div>
+                    <div class="box-8"></div>
+                    <div class="box-9"></div>
+
+                </div>
+                <div class="row-two">
+                    <div class="box-1"></div>
+                    <div class="box-2"></div>
+                    <div class="box-3"></div>
+                    <div class="box-4"></div>
+                    <div class="box-5"></div>
+                    <div class="box-6"></div>
+                    <div class="box-7"></div>
+                    <div class="box-8"></div>
+                    <div class="box-9"></div>
+                </div>
+                <div class="row-three">
+                    <div class="box-1"></div>
+                    <div class="box-2"></div>
+                    <div class="box-3"></div>
+                    <div class="box-4"></div>
+                    <div class="box-5"></div>
+                    <div class="box-6"></div>
+                    <div class="box-7"></div>
+                    <div class="box-8"></div>
+                    <div class="box-9"></div>
+                </div>  
+            </div>
+            <div class="ticketno">
+                <span>Ticket No:</span> <span class="ticket-no"></span>
+            </div>
+            <div class="sheetno">
+                <span>Sheet No:</span> <span class="sheet-no"></span>
+            </div>
+            <div class="ticketowner">
+              <span class="ticket-owner"></span>
+            </div>
+            
+        </div>
+    </template>
+    <div class="container-one" id="container-one">
+        <div class="profile">
+            <div class="logo">
+                <img src="../images/logo.svg" alt="">
+            </div>
+            
+            <div class="random-no-box">
+                <h3>Timeline</h3>
+                <div class="timeline-box" id="timeline-box">
+                </div>
+
+                <div class="player-btns">
+                    <button id="gameInfo" value="0">Game Informations</button>
+                    <button id="winner-box">Winners</button>
+                    <button id="Home-btn" onclick="window.location.replace('/')">Home</button>
+                </div>
+                
+            </div>
+           
+        </div>
+        
+
+        <div class="section-one">
+            <div class="boxes">
+                <div class="b1"><h1>1</h1></div>
+                <div class="b2"><h1>2</h1></div>
+                <div class="b3"><h1>3</h1></div>
+                <div class="b4"><h1>4</h1></div>
+                <div class="b5"><h1>5</h1></div>
+                <div class="b6"><h1>6</h1></div>
+                <div class="b7"><h1>7</h1></div>
+                <div class="b8"><h1>8</h1></div>
+                <div class="b9"><h1>9</h1></div>
+                <div class="b10"><h1>10</h1></div>
+                <div class="b11"><h1>11</h1></div>
+                <div class="b12"><h1>12</h1></div>
+                <div class="b13"><h1>13</h1></div>
+                <div class="b14"><h1>14</h1></div>
+                <div class="b15"><h1>15</h1></div>
+                <div class="b16"><h1>16</h1></div>
+                <div class="b17"><h1>17</h1></div>
+                <div class="b18"><h1>18</h1></div>
+                <div class="b19"><h1>19</h1></div>
+                <div class="b20"><h1>20</h1></div>
+                <div class="b21"><h1>21</h1></div>
+                <div class="b22"><h1>22</h1></div>
+                <div class="b23"><h1>23</h1></div>
+                <div class="b24"><h1>24</h1></div>
+                <div class="b25"><h1>25</h1></div>
+                <div class="b26"><h1>26</h1></div>
+                <div class="b27"><h1>27</h1></div>
+                <div class="b28"><h1>28</h1></div>
+                <div class="b29"><h1>29</h1></div>
+                <div class="b30"><h1>30</h1></div>
+                <div class="b31"><h1>31</h1></div>
+                <div class="b32"><h1>32</h1></div>
+                <div class="b33"><h1>33</h1></div>
+                <div class="b34"><h1>34</h1></div>
+                <div class="b35"><h1>35</h1></div>
+                <div class="b36"><h1>36</h1></div>
+                <div class="b37"><h1>37</h1></div>
+                <div class="b38"><h1>38</h1></div>
+                <div class="b39"><h1>39</h1></div>
+                <div class="b40"><h1>40</h1></div>
+                <div class="b41"><h1>41</h1></div>
+                <div class="b42"><h1>42</h1></div>
+                <div class="b43"><h1>43</h1></div>
+                <div class="b44"><h1>44</h1></div>
+                <div class="b45"><h1>45</h1></div>
+                <div class="b46"><h1>46</h1></div>
+                <div class="b47"><h1>47</h1></div>
+                <div class="b48"><h1>48</h1></div>
+                <div class="b49"><h1>49</h1></div>
+                <div class="b50"><h1>50</h1></div>
+                <div class="b51"><h1>51</h1></div>
+                <div class="b52"><h1>52</h1></div>
+                <div class="b53"><h1>53</h1></div>
+                <div class="b54"><h1>54</h1></div>
+                <div class="b55"><h1>55</h1></div>
+                <div class="b56"><h1>56</h1></div>
+                <div class="b57"><h1>57</h1></div>
+                <div class="b58"><h1>58</h1></div>
+                <div class="b59"><h1>59</h1></div>
+                <div class="b60"><h1>60</h1></div>
+                <div class="b61"><h1>61</h1></div>
+                <div class="b62"><h1>62</h1></div>
+                <div class="b63"><h1>63</h1></div>
+                <div class="b64"><h1>64</h1></div>
+                <div class="b65"><h1>65</h1></div>
+                <div class="b66"><h1>66</h1></div>
+                <div class="b67"><h1>67</h1></div>
+                <div class="b68"><h1>68</h1></div>
+                <div class="b69"><h1>69</h1></div>
+                <div class="b70"><h1>70</h1></div>
+                <div class="b71"><h1>71</h1></div>
+                <div class="b72"><h1>72</h1></div>
+                <div class="b73"><h1>73</h1></div>
+                <div class="b74"><h1>74</h1></div>
+                <div class="b75"><h1>75</h1></div>
+                <div class="b76"><h1>76</h1></div>
+                <div class="b77"><h1>77</h1></div>
+                <div class="b78"><h1>78</h1></div>
+                <div class="b79"><h1>79</h1></div>
+                <div class="b80"><h1>80</h1></div>
+                <div class="b81"><h1>81</h1></div>
+                <div class="b82"><h1>82</h1></div>
+                <div class="b83"><h1>83</h1></div>
+                <div class="b84"><h1>84</h1></div>
+                <div class="b85"><h1>85</h1></div>
+                <div class="b86"><h1>86</h1></div>
+                <div class="b87"><h1>87</h1></div>
+                <div class="b88"><h1>88</h1></div>
+                <div class="b89"><h1>89</h1></div>
+                <div class="b90"><h1>90</h1></div>
+                
+
+            </div>
+            <div class="about-game-box" id="about-game-box">
+                <div class="game-detail">
+                    <h3>About This Game</h3>
+                    <div class="lists">
+                        <h1>Date </h1><span id="game-date"></span>
+                        <h1>Time </h1><span id="game-time"></span>   
+                        <h1>Tickets</h1><span id="game-tickets"></span>  
+                    </div>
+                </div>
+                <div class="winner-detail">
+                    
+                    <h3>Winners</h3>
+                    <div class="winner-list">
+                        <h3>First Full-House Winner:<span id="f-h-w-ticket"></span></h3>
+                        <h3>Second Full-House Winner:<span id="s-f-h-w-ticket"></span></h3>
+                        <h3>First Row Winner:<span id="f-r-w-ticket"></span></h3>
+                        <h3>Second Row Winner:<span id="s-r-w-ticket"></span></h3>
+                        <h3>Third Row Winner:<span id="t-r-w-ticket"></span></h3>
+                        <h3>Sheet Winner:<span id="sheet-w-ticket"></span></h3>
+                        <h3>Corner Winner:<span id="corner-w-ticket"></span></h3>
+                        <h3>First Five Winner:<span id="f-f-w-ticket"></span></h3>
+                        
+                    </div>
+
+                    
+                </div>
+            </div>
+           
+        </div>
+        
+    </div>
+    
+    <template>
+        <div class="circle"></div>
+    </template>
+    
+    <div class="pop-up-back" id="pop-up-back">
+        <div class="pop-up-box">
+            <div class="win-image">
+                <img id="tropy-img" src="../images/tropy.png" >
+                <svg id="svg-one" height="25" width="23" class="star rating" data-rating="1">
+                    <polygon points="9.9, 1.1, 3.3, 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;fill:#ffc60a"/>
+                </svg>
+                <svg id="svg-two" height="25" width="23" class="star rating" data-rating="1">
+                    <polygon points="9.9, 1.1, 3.3, 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;fill:#ffc60a"/>
+                </svg>
+                <svg id="svg-three" height="25" width="23" class="star rating" data-rating="1">
+                    <polygon points="9.9, 1.1, 3.3, 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;fill:#ffc60a"/>
+                </svg>
+                <svg id="svg-four" height="25" width="23" class="star rating" data-rating="1">
+                    <polygon points="9.9, 1.1, 3.3, 21.78, 19.8, 8.58, 0, 8.58, 16.5, 21.78" style="fill-rule:nonzero;fill:#ffc60a"/>
+                </svg>
+            </div>
+            <h1 id="tropy-name">Winner</h1>
+            <h3>Congratulation,<span id="ticket-no-winner"></span></h3>
+            
+        </div>
+    </div>
+    <div class="Ticket-box" id="Ticket-box" style="visibility: visible;z-index: 10;">
+       
+        <div class="inside-box">
+            <div class="search-field">
+                <input type="text" name="ticketno" id="ticket-no" placeholder="Search">
+                <select id="options">
+                    <option disabled selected value="undefined">Choose a option</option>
+                    <option value="Ticket">Ticket</option>
+                    <option value="t_username">Username</option>
+                    <option value="Sheet">Sheet</option>
+                </select>
+                <button onclick="showparticularTicket()">Search</button>
+                <button onclick="showAllTicket()">Show All</button>
+            </div>
+
+
+            <div id="box-contain-tickets" class="box-contain-tickets">
+
+               
+
+            </div>
+        </div>
+    </div>
+    <div class="winner-container">
+        <h1>Winners Tickets</h1>
+
+        <div class="winners-ticket">
+            <div class="won">
+                <h1>Full House</h1>
+                <div class="fh-ticket-container" id="fh-ticket-container">
+
+                </div>
+            </div>
+           
+            
+
+        <div class="won">
+            <h1>Second Full House</h1>
+            <div class="sfh-ticket-container" id="sfh-ticket-container">
+                
+            </div>
+        </div>
+        <div class="won">
+                <h1>First Five</h1>
+                <div class="ff-ticket-container" id="ff-ticket-container">
+                    
+                </div>
+            
+        </div>
+        <div class="won">
+            <h1>Four Corner</h1>
+            <div class="fc-ticket-container" id="fc-ticket-container">
+                
+            </div>
+        
+         </div>
+         <div class="won">
+            <h1>First Row</h1>
+            <div class="fr-ticket-container" id="fr-ticket-container">
+                
+            </div>
+        
+        </div>
+        <div class="won">
+            <h1>Second Row</h1>
+            <div class="sr-ticket-container" id="sr-ticket-container">
+                
+            </div>
+        
+        </div>
+        <div class="won">
+            <h1>Third Row</h1>
+            <div class="tr-ticket-container" id="tr-ticket-container">
+                
+            </div>
+        
+        </div>
+        <div class="won">
+            <h1>Sheet Winner</h1>
+            <div class="sheet-ticket-container" id="sheet-ticket-container">
+                
+            </div>
+        
+        </div>
+
+
+
+
+        </div>
+    </div>
+   
+    <div class="game-starting-box" id="game-starting-box">
+        <div class="game-start-count">
+            <h1 id="staring-game">Game Will Start Shortly.</h1>
+            
+        </div>
+
+        <div class="l-circle" id="l-circle">
+            <h3 id="start-count"></h3>
+        </div>
+    </div>
+
+    <div class="game-end-box" id="game-end-box">
+        <div class="game-end-msg">
+            <h1>Game has Ended..</h1>
+        </div>
+        <button id="close-win-box">Close</button>
+        <div class="winnerslist-box">
+            <h1>Congratulation to the Winners...</h1>
+            <div class="winners-names">
+                <div class="winner-box">
+                    <h1>Full House</h1>
+
+                    <h3>Prize Money: <span id="fh-winner-prize"></span></h3>
+                    <h3>Ticket No:<span id="fh-ticket-no"></span></h3>
+                    <h3>Winner Name: <span id="fh-winner-name"></span></h3>
+                </div>
+                <div class="winner-box">
+                    <h1>Second Full House</h1>
+                    <h3>Prize Money: <span id="sfh-winner-prize"></span></h3>
+                    <h3>Ticket No:<span id="sfh-ticket-no"></span></h3>
+                    <h3>Winner Name: <span id="sfh-winner-name"></span></h3>
+                </div>
+                <div class="winner-box">
+                    <h1>First Row</h1>
+                    <h3>Prize Money: <span id="fr-winner-prize"></span></h3>
+                    <h3>Ticket No:<span id="fr-ticket-no"></span></h3>
+                    <h3>Winner Name: <span id="fr-winner-name"></span></h3>
+                </div>
+                <div class="winner-box">
+                    <h1>Second Row</h1>
+                    <h3>Prize Money: <span id="sr-winner-prize"></span></h3>
+                    <h3>Ticket No:<span id="sr-ticket-no"></span></h3>
+                    <h3>Winner Name: <span id="sr-winner-name"></span></h3>
+                </div>
+                <div class="winner-box">
+                    <h1>Third Row</h1>
+                    <h3>Prize Money: <span id="tr-winner-prize"></span></h3>
+                    <h3>Ticket No:<span id="tr-ticket-no"></span></h3>
+                    <h3>Winner Name: <span id="tr-winner-name"></span></h3>
+                </div>
+                <div class="winner-box">
+                    <h1>First Five</h1>
+                    <h3>Prize Money: <span id="ff-winner-prize"></span></h3>
+                    <h3>Ticket No:<span id="ff-ticket-no"></span></h3>
+                    <h3>Winner Name: <span id="ff-winner-name"></span></h3>
+                </div>  
+                <div class="winner-box">
+                    <h1>Sheet Winner</h1>
+                    <h3>Prize Money: <span id="s-winner-prize"></span></h3>
+                    <h3>Ticket No:<span id="s-ticket-no"></span></h3>
+                    <h3>Winner Name: <span id="s-winner-name"></span></h3>
+                </div>
+                <div class="winner-box">
+                    <h1>Four Corner Winner</h1>
+                    <h3>Prize Money: <span id="fc-winner-prize"></span></h3>
+                    <h3>Ticket No:<span id="fc-ticket-no"></span></h3>
+                    <h3>Winner Name: <span id="fc-winner-name"></span></h3>
+                </div>
+               
+
+            </div>
+        </div>
+    </div>
+    <script src="../showtickets.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module">
+       import {
+        database,
+        ref,
+        onValue,
+        update,
+        set,
+        getAuth,
+        signInWithEmailAndPassword,
+        signOut,
+      } from "./views/firebaseConnection.js";
+        var io= io('/games');
+        var drawn_number=[];
+
+        document.addEventListener('DOMContentLoaded',()=>{
+            document.querySelector(".b1").style.animation="scaleupdown 1s ease";
+                
+                io.on('old',(no)=>{
+                    
+                    if(no.length!=0){
+                        document.getElementById("game-starting-box").style.display='none';
+                        document.getElementById("game-starting-box").style.zIndex='-10';
+                        
+                        no.forEach((data)=>{
+                            drawn_number.push(data)
+                            addCircle(data)
+                            changeColor(data);
+                            document.querySelector(".b"+data).style.backgroundColor="#fd7905";
+                            document.querySelector(".b"+data).style.color="white";
+                            document.querySelector(".b"+data).style.animation="scaleupdown 1s ease";
+                    })
+                    if(no.length>=90){
+                       
+                        var msg = new SpeechSynthesisUtterance();
+                        msg.text = 'Game Has Ended';
+                        window.speechSynthesis.speak(msg);
+                        
+                        document.getElementById('game-end-box').style.display='flex';
+                        document.getElementById('game-end-box').style.zIndex='100';
+
+                        document.getElementById('winner-box').style.display='flex';
+                        document.getElementById('Home-btn').style.display='flex';
+                    }
+                    }
+                    
+                })
+
+                
+
+                document.getElementById('close-win-box').addEventListener('click',()=>{
+                    document.getElementById('game-end-box').style.display='none';
+                    document.getElementById('game-end-box').style.zIndex='0';
+                })
+
+
+                document.getElementById('winner-box').addEventListener('click',function(){
+                    document.getElementById('game-end-box').style.display='flex';
+                    document.getElementById('game-end-box').style.zIndex='100';
+                })
+
+                
+                io.on('willstart',(msg)=>{
+                    document.getElementById('l-circle').style.display='flex';
+
+                    var count=0;
+                    
+                    var myInter=setInterval(countFunc,1000)
+
+                    function countFunc(){
+                        if(count==5){
+                            clearInterval(myInter);
+                            document.getElementById("game-starting-box").style.display='none';
+                            document.getElementById("game-starting-box").style.zIndex='-10';
+                        }
+                        else{
+                            document.getElementById('staring-game').textContent="Starting In.."
+                            document.getElementById('start-count').textContent=5-count;
+
+                            count++;
+                        }
+                    };
+
+                })
+                
+
+               
+                io.on('game-end',(msg)=>{
+                var message=setInterval(function(){
+                    alert(msg)
+                    clearInterval(message)
+                    document.getElementById('game-end-box').style.display='flex';
+                    document.getElementById('game-end-box').style.zIndex='100';
+                },8000)
+                
+                document.getElementById('winner-box').style.display='flex';
+                document.getElementById('Home-btn').style.display='flex';
+            })
+            
+                
+
+                io.on('Random',(rand)=>{
+                    drawn_number.push(rand)
+                    
+                    if( document.getElementById("game-starting-box").style.display!='none'){
+                        document.getElementById("game-starting-box").style.display='none';
+                        document.getElementById("game-starting-box").style.zIndex='-10';
+                    }
+                   
+                   
+                    changeColor(rand);
+                    addCircle(rand);
+                    var msg = new SpeechSynthesisUtterance();
+                    msg.text = rand;
+                    window.speechSynthesis.speak(msg);
+                    document.querySelector(".b"+rand).style.backgroundColor="#fd7905";
+                    document.querySelector(".b"+rand).style.color="white";
+                    document.querySelector(".b"+rand).style.animation="scaleupdown 1s ease";
+
+                   
+                    if(drawn_number.length>=90){
+                        var msg = new SpeechSynthesisUtterance();
+                        msg.text = 'Game Has Ended';
+                        window.speechSynthesis.speak(msg);
+                        console.log('Done');
+                        document.getElementById('game-end-box').style.display='flex';
+                        document.getElementById('game-end-box').style.zIndex='100';
+
+                        document.getElementById('game-end-box').style.display='flex';
+                        document.getElementById('game-end-box').style.zIndex='100';
+
+                        document.getElementById('winner-box').style.display='flex';
+                        document.getElementById('Home-btn').style.display='flex';
+
+                        
+                    }
+                })
+
+                function addCircle(rand){
+                    var temp = document.getElementsByTagName("template")[1];
+                    var clon = temp.content.cloneNode(true);
+                    
+                    clon.childNodes.forEach((x)=>{
+                        if(x.nodeName=="DIV"){
+                            x.textContent=rand;
+                        }
+                    });
+
+                 document.getElementById("timeline-box").append(clon);
+                 document.getElementById("timeline-box").scrollTop=document.getElementById("timeline-box").scrollHeight
+                document.getElementById("timeline-box").scrollLeft =document.getElementById("timeline-box").scrollWidth;
+                    
+                }
+
+                function changeColor(random_no){
+
+                    const main=document.getElementById('box-contain-tickets');
+
+                    
+                    main.childNodes.forEach((a)=>{
+                        
+                        if(a.nodeType==Node.ELEMENT_NODE){
+                            if(a.className=="ticket"){
+                                a.childNodes.forEach((x)=>{
+                                    
+                                    if(x.className=="ticketsvalue"){
+                                        x.childNodes.forEach((y)=>{
+                                            if(y.className=="row-one"){
+                                        
+                                                y.childNodes.forEach((z)=>{
+                                                    if(z.nodeName=="DIV"){
+                                                        if(z.textContent==random_no){
+                                                            z.style.backgroundColor="black";
+                                                            z.style.color="white";
+                                                        }
+                                                    }
+                                                    
+                                                })
+
+                                                return;
+                                            }
+                                            if(y.className=="row-two"){
+                                            var count=0;
+                                                y.childNodes.forEach((z)=>{
+                                                    if(z.nodeName=="DIV"){
+                                                        if(z.textContent==random_no){
+                                                            z.style.backgroundColor="black";
+                                                            z.style.color="white";
+                                                        }
+                                                    }
+                                            })
+                                            return;
+                                            }
+                                            if(y.className=="row-three"){
+                                                
+                                                var count=0;
+                                                y.childNodes.forEach((z)=>{
+                                                
+                                                    if(z.nodeName=="DIV"){
+                                                        if(z.textContent==random_no){
+                                                            z.style.backgroundColor="black";
+                                                            z.style.color="white";
+                                                        }
+                                                    }
+                                            })
+                                            return;
+                                            }
+                                        })
+                                    }
+                                    
+                                })
+                            }
+                        }
+                    })
+
+
+                    }
+
+                    
+                    var par=new URLSearchParams(location.search);
+                    var date=par.get('date');
+                    var time=par.get('time')
+                    var tickets=par.get('ticket')
+
+                    firebase.database().ref("Games/"+date+"/"+time+"/gameDetails/finished").once('value',(snapshot)=>{
+                    if(snapshot.val()==true){
+                        document.getElementById('game-end-box').style.display='flex';
+                        document.getElementById('game-end-box').style.zIndex='100';
+                    }
+                })
+
+                    document.getElementById('game-date').textContent=date;
+                    document.getElementById('game-time').textContent=time;
+                    document.getElementById('game-tickets').textContent=tickets;
+
+                    firebase.database().ref('Games/'+date+'/'+time+"/gameDetails").on('value',(snapshot)=>{
+
+                        document.getElementById('fh-winner-prize').textContent=snapshot.child('/fhprize').val();
+                        document.getElementById('sfh-winner-prize').textContent=snapshot.child('/sfhprize').val();
+                        document.getElementById('fr-winner-prize').textContent=snapshot.child('/frprize').val();
+                        document.getElementById('sr-winner-prize').textContent=snapshot.child('/srprize').val();
+                        document.getElementById('tr-winner-prize').textContent=snapshot.child('/trprize').val();
+                        document.getElementById('fc-winner-prize').textContent=snapshot.child('/fcprize').val();
+                        document.getElementById('ff-winner-prize').textContent=snapshot.child('/ffprize').val();
+                        document.getElementById('s-winner-prize').textContent=snapshot.child('/sprize').val();
+
+
+                    });
+                    firebase.database().ref("Games/"+date+"/"+time+"/gameDetails/started").on('value',(snapshot)=>{
+                        if(snapshot.val()==false){
+                            window.location.reload();
+                        }
+                    })
+        });
+
+            setTimeout(function()
+                {
+                var s = document.createElement("script");
+                s.type = "text/javascript";
+                s.src = "../game-player.winner-anim.js";
+                var head = document.getElementsByTagName("head")[0];
+                head.appendChild(s);
+                } , 2000);
+       
+    </script>
+   
+    
+</body>
+</html>

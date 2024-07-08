@@ -1,0 +1,1200 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    height: auto;
+}
+
+
+.container-one{
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    height: auto;
+    
+    
+}
+.navigation{
+    width: 100%;
+    height: 10vh;
+    background-color:white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.5) ;
+}
+.navigation img{
+    width: 300px;
+    height: auto;
+}
+.navigation a{
+    position: absolute;
+    right: 80px;
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: Black;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.box-one{
+    width: 100%;
+    height:80vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box-one img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+    object-fit:cover;
+    z-index: 0;
+    background-size: 100%;
+    background-position: 100% 90%;  
+    background-repeat: no-repeat;
+    transition: all 1s;
+}
+.box-one img:hover{
+    filter: blur(0px);
+}
+
+.latest-game{
+    position: absolute;
+    right: 100px;
+    min-width: 300px;
+    width: auto;
+    display: flex;   
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.8);
+}
+.prizeinfo{
+    width: 0px;
+    height: 100%;
+    display:none;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.prizeinfo table{
+    visibility: hidden;
+}
+@keyframes fadein {
+    0%{
+        visibility: hidden;
+    }
+    70%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: visible;
+    }
+    
+}
+@keyframes fadeout {
+    0%{
+        visibility: visible;
+    }
+    30%{
+        visibility: hidden;
+    }
+    100%{
+        visibility: hidden;
+    }
+    
+}
+@keyframes slideup {
+    0%{
+        
+        width: 0;
+    }
+    100%{
+        
+        width: 300px;
+    }
+}
+@keyframes slidedown {
+    0%{
+        
+        width: 300px;
+    }
+    100%{
+        
+        width: 0;
+    }
+}
+
+.prizeinfo table td{
+    border: 0.4px solid black;
+}
+.prizeinfo table td{
+    padding: 5px 20px;
+}
+
+.game-infor{
+    width: 300px;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-infor a{
+    color: black;
+}
+
+.game-infor h3{
+    width: 90%;
+    height: 30px;
+    text-align: center;
+    
+    animation: con-load-anim 2s ease-in-out infinite;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.game-infor span{
+    font-size: 17px;
+    width: 100px;
+    height: 30px;
+    animation: con-load-anim 2s ease-in-out infinite;
+    text-align: center;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+.game-infor button{
+    width: 120px;
+    height: 40px;
+    margin: 20px;
+    border: 2px solid black;
+    font-size: 18px;
+}
+.game-infor :last-child{
+    width: 80px;
+    border: none;
+    border-bottom: 1px solid black;
+    font-size: 13px;
+    background-color: transparent;
+    margin: 0;
+}
+
+@keyframes con-load-anim {
+    0%,100%{
+        background: linear-gradient(to right, #eee 2%, #ddd 18%, #eee 33%);
+        background-size: 200%;
+        background-position: 0% 0%;
+    }
+    50%{
+        background: linear-gradient(to right, #eee 2%, #ddd 18%, #eee 33%);
+        background-size: 200%;
+        background-position: 100% 100%;
+    }
+}
+
+
+
+
+.gameDetails{
+    position: relative;
+    width: 95%;
+    height: 90px;
+    margin-top: 10px;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    justify-content: space-between;
+
+    
+}
+.gameDetails .g-box-one,.g-box-two,.g-box-three,.g-box-four{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+
+}
+.gameDetails button{
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    
+}
+.quotes h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+}
+.quotes span{
+    position: relative;
+    top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    color: gray;
+    font-size: 18px;
+}
+
+.our-story{
+   width: 100%;
+   height: 100vh;
+   
+   background:linear-gradient(to bottom,#000,#000,#000,#000,#000,#fd7905);
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   
+}
+.our-story h1{
+    color: white;
+    margin: 30px;
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+    
+}
+.our-story h1 span{
+    font-size: 18px;
+    width: 500px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.our-story .available-ticket{
+    position: relative;
+    width: 40%;
+    height: 60%;
+   
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: center;
+    
+ }
+
+.ticke{
+    position: relative;
+    width: auto;
+    height:90%;
+   
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-column-gap: 10px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px;
+    grid-row-gap: 10px;
+    margin-top: 30px;
+    padding: 40px;
+    margin-bottom: 30px;
+   
+}
+.avail-tikcet-box{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    
+}
+.partic-ticket{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    z-index: -10;
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+}
+
+.partic-ticket .tic{
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    
+}
+.tic .ticket{
+    width: 400px;
+    height: 300px;
+    box-shadow: none;
+    
+}
+.tic .ticket .ticketno{
+    margin-top: 5px;
+}
+.tic .ticket span{
+    color: black;
+}
+.tic .ticket .ticketsvalue{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.ticket{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5) ;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+ .ticket .ticketsvalue{
+    width: 100%;
+    height: 200px;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.ticket .ticketsvalue .row-one,.row-two,.row-three{
+    width: 95%;
+    height: 50px;
+    background-color: white;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+ .ticket .row-one div,.row-two div,.row-three div{
+    width: 10%;
+    height: 45px;
+    display: flex;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    
+}
+.ticket span{
+    
+    font-family: Arial, Helvetica, sans-serif;
+}
+.ticketno{
+    display: flex;
+    height: auto;
+    
+    width: 200px;
+    justify-content: center;
+    
+}
+.ticket .ticketowner{
+    width: 100%;
+    height: auto;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+   
+}
+.ticket .ticketowner span{
+    position: relative;
+    right: 30px;
+    align-self: flex-end;
+}
+.sheetno{
+    display: flex;
+    width: 200px;
+    justify-content: center;
+}
+
+
+@keyframes POPopen {
+    0%{
+        transform: scale(0);
+        visibility: hidden;
+        z-index: -10;
+    }
+    100%{
+        transform: scale(1);
+        visibility: visible;
+        z-index: 10;
+    }
+}
+@keyframes POPclose {
+    0%{
+        transform: scale(1);
+        
+        visibility: visible;
+        z-index: 10;
+    }
+    100%{
+        transform: scale(0);
+        visibility: hidden;
+        z-index: -10;
+    }
+}
+
+
+
+
+
+.text{
+   width: 90%;
+   height: 500px;
+   display: flex;
+   margin-top: 40px;
+
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.text h1{
+   font-size: 40px;
+   font-family: Arial, Helvetica, sans-serif;
+   color: white;
+   text-align: center;
+}
+.text span{
+   width: 70%;
+   font-family: Arial, Helvetica, sans-serif;
+   margin-top: 80px;
+   text-align: center;
+   font-size: 20px;
+   color: white;
+   line-height: 25px;
+}
+
+.two-box{
+   width: 80%;
+   height: 250px;
+   margin-top: 100px;
+   display: flex;
+
+   margin-bottom: 50px;
+}
+
+.two-box .first-box{
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  
+   background-color: white;
+
+}
+.two-box .first-box h1{
+   font-weight: 900;       
+   font-size: 24px;
+}
+.two-box .first-box span{
+   font-weight:100;
+   margin-top: 30px; 
+
+   font-size: 18px;     
+
+}
+
+
+.two-box .second-box{
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #fd7905;
+
+}
+.two-box .second-box h1{
+   font-weight: 900;       
+   font-size: 24px;
+   color: white;
+   
+}
+.two-box .second-box span{
+   font-weight:100;
+   margin-top: 30px; 
+   color: white;
+   font-size: 18px;     
+
+}
+
+.container-two{
+   position: relative;
+   width: 100%;
+   height: 80vh;
+   background-color: #fd7905;
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+.container-two .instr{
+    justify-content: space-between;
+    color: white;
+    margin-top: 100px;
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+}
+
+.container-two .instr h3{
+    width: 300px;
+    margin-top: 20px;
+}
+
+.loading-page{
+    position: absolute;
+    width: 50%;
+    height: 90%;
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    z-index: 200;
+  }
+  .spinner {
+    position: relative;
+    
+    width: 100px;
+    text-align: center;
+  }
+  
+  .spinner > div {
+    width: 30px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  }
+  
+  .spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  
+  .spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  
+  @-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0) }
+    40% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bouncedelay {
+    0%, 80%, 100% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 40% { 
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+    }
+  }
+
+
+.container-two .c-box-one{
+   width: 60%;
+   height: 600px;
+   border-radius: 10px;
+   margin-top: 100px;
+   padding: 50px;
+   margin-bottom: 100px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: white;
+   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+.bottom{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
+
+.ticket-box{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    z-index: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.ticket-box .close{
+    position: relative;
+    width: 70px;
+    height: 30px;
+    font-size: 20px;
+    right: 50px;
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.ticket-box .content-box{
+    width: 90%;
+    height: 90%;
+    margin-top: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ticket-box .content-box .search-field{
+    width: 100%;
+    height: 15%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-field input{
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    border :none;
+    font-size: 20px;
+}
+.search-field button{
+    margin-left: 10px;
+    height: 50px;
+    width: 100px;
+    font-size: 20px;
+    border: none;
+}
+
+
+
+.ticket-box .content-box .t-box{
+    width: 80%;
+    height: 70%;
+    margin: 10px;
+    overflow: auto;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-columns: 50% 50%;
+}
+
+.ticket-box .content-box .t-box span{
+    position: relative;
+    text-align: center;
+
+    
+}
+.ticket-box .content-box .contact-no{
+
+    width: 100%;
+    height: 10%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+.ticket-box .content-box .contact-no h3{
+    margin-top: 10px;
+}
+
+.result{
+    width: 100%;
+    height: 5%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result span{ 
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.game-end-box{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -10;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-end-box .game-end-msg{
+    color: white;
+}
+
+.game-end-box button{
+    width: 100px;
+    height: 50px;
+    border: none;
+    margin-top: 20px;
+    background-color: #fd7905;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.game-end-box .winnerslist-box{
+    width: 90%;
+    height: 80%;
+    overflow-y: auto;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.game-end-box .winnerslist-box .winners-names{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.game-end-box .winnerslist-box .winner-box{
+    width: 350px;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid black;
+}
+.game-end-box .winnerslist-box .winner-box h1{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #fd7905;
+    color: white;
+  
+}
+
+
+@media screen and (max-width:645px){
+
+    body{
+        overflow-x: hidden;
+    }
+    .container-one{        
+        width: 100%;
+        min-height: 50vh;
+        height: auto;
+    }
+   
+
+    .navigation{
+        width: 100%;
+        height: 10vh;
+        
+        justify-content: center;      
+    }
+    .navigation img{
+        position: relative;
+        width: 200px;
+       
+    }
+    .navigation a{
+        font-size: 12px;
+        right: 10px;
+    }
+    .box-one{
+        width: 100%;
+        height: 250px;
+        
+        background: url('./images/pexels-ylanite-koppens-776656.jpg');
+        background-size: 150%;
+        background-position: 40% 90%;
+        
+    }
+    .box-one .quotes{
+        width: 60%;
+        height: 100px;
+        font-size: 2px;
+    }
+    .quotes h1,button,span{
+        font-size: 12px;
+    }
+    .quotes button{
+        width:60px;
+        height: 25px;
+        font-size: 12px;
+    }
+
+
+
+    .latest-game{
+        min-width: 150px;
+        max-height: 200px;
+        height: auto;
+        right: 10px;
+        border-radius: 0px;
+    }
+    .latest-game h3{
+        font-size: 16px;
+        margin-top: 10px;
+        
+    }
+    .latest-game span{
+        margin-top: 5px;
+        font-size: 13px;
+        
+    }
+    .latest-game button{
+        width: 90px;
+        height: 30px;
+        margin-bottom: 0;
+        margin-top: 5px;
+        font-size: 13px;
+    
+    }
+    .game-infor{
+        width: 150px;
+    }
+
+    .game-infor h3{
+        font-size: 13px;
+        height: 20px;
+        text-align: center;
+    }
+
+    .game-infor span{
+        height: 20px;
+        margin: 3px;
+    }
+
+    .game-infor button{
+        width: 80px;
+        height: 30px;
+        font-size: 11px;
+    }
+    .game-infor #prize{
+        font-size: 11px;
+    }
+    .prizeinfo{
+        width: 180px;
+        transition: all;
+    }
+
+    .prizeinfo table{
+        font-size: 11px;
+        padding: 2px;
+    }
+    .prizeinfo table td{
+        padding: 0px 10px;
+    }
+    @keyframes fadein {
+        0%{
+            visibility: hidden;
+        }
+        70%{
+            visibility: hidden;
+        }
+        100%{
+            visibility: visible;
+        }
+        
+    }
+    @keyframes fadeout {
+        0%{
+            visibility: visible;
+        }
+        10%{
+            visibility: hidden;
+        }
+        100%{
+            visibility: hidden;
+        }
+        
+    }
+    @keyframes slideup {
+        0%{
+            
+            width: 0;
+        }
+        100%{
+            width: 200px;
+           
+        }
+    }
+    @keyframes slidedown {
+        0%{
+            width: 200px;
+            
+        }
+        100%{
+            
+            width: 0;
+        }
+    }
+    .our-story{
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    .our-story h1{
+        width: 300px;
+        height: auto;
+        text-align: center;
+        margin: 0;
+        font-size: 16px;
+    }
+    .our-story h1 span{
+        width:100% ;
+        margin: 0;
+        font-size: 11px;
+    }
+    .our-story .available-ticket{
+        width: 90%;
+    }
+    .ticke{
+      
+        width: auto;
+        height:90%;
+        display: grid;
+        grid-template-columns: 30px 30px 30px 30px 30px 30px;
+        grid-template-rows: 30px;
+        grid-column-gap: 10px;
+        grid-row-gap: 5px;
+        margin-top: 10px;
+        padding: 10px;
+        margin-bottom: 30px;
+       
+    }
+    .partic-ticket .tic{
+        width: 300px;
+        height: 200px;
+        
+        
+    }
+    .tic .ticket{
+        width: 300px;
+        height: 200px;
+        
+    }
+
+    
+    .avail-tikcet-box{
+        width: 30px;
+        height: 30px;
+    }
+
+   
+    
+    .two-box{
+        width: 90%;
+        height: 150px;
+    }
+    .two-box .first-box h1,.two-box .second-box h1{
+        font-size: 16px;
+        margin-top: 0px;
+    }
+    .two-box .first-box span,.two-box .second-box span{
+        width: 80%;
+        text-align: center;
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .container-two{
+        display: block;
+        height: 400px;
+    }
+    .container-two .instr{
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 20%;
+        margin: 0;
+    }
+    .container-two .instr h1{
+        
+        text-align: center;
+        font-size: 18px;
+        margin-top: 0px;
+    }
+    .container-two .instr h3{
+        font-size: 11px;
+        text-align: center;
+        margin-top: 0px;
+    }
+    .container-two .c-box-one{
+       position: relative;
+        width: 90%;
+        height: 60%;
+        left: 5%;
+    }
+    .container-two .c-box-one button{
+        height: 35px;
+    }
+    .container-two .c-box-one :first-child{
+        margin-top: 5px;
+    }
+    .container-two .c-box-one .gameDetails{
+        margin-top: 10px;
+    }
+    .bottom{
+        position: relative;
+        width: 100%;
+        height: 50px;
+        background-color: black;
+    }
+    .container-two .c-box-one{
+        margin-top: 20px;
+        padding: 10px;
+    }
+    .gameDetails{
+        width: 100%;
+        height: 80px;
+    }
+    .gameDetails h3{
+        font-size: 11px;        
+    }
+    .gameDetails span{
+        font-size: 9px;
+        text-align: center;
+    }
+    .gameDetails button{
+        width: 40px;
+        height: 30px;
+        font-size: 9px;
+    }
+
+    .ticket-box .close{
+        width: 50px;
+        font-size: 13px;
+        border: 2px solid white;
+        background-color: rgba(255, 255, 255, 0.8);
+        right: 20px;
+    }
+    .ticket-box .content-box .t-box{
+        width: 90%;
+        grid-template-columns: 100%;
+    }
+    .search-field input{
+        width: 150px;
+        height: 30px;
+        padding: 10px;
+        border :none;
+        font-size: 13px;
+    }
+    .search-field button{
+        margin-left: 10px;
+        height: 30px;
+        width: 60px;
+        font-size: 13px;
+        border: none;
+    }
+    .ticket-box .content-box .t-box{
+
+        
+        height: 60%;
+        
+    
+    }
+    .ticket-box .content-box .contact-no{
+
+        width: 100%;
+        height: 20%;
+        
+    
+    }
+    .ticket-box .content-box .contact-no h3{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        
+    }
+    .ticket-box .content-box .contact-no h3 span{
+        margin-left: 10px;
+    }
+    .game-end-box{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+
+    .game-end-box button{
+        width: 80px;
+        height: 30px;
+    }
+    .game-end-box .game-end-msg h1{
+        font-size: 18px;
+        
+    }
+
+    .game-end-box .winnerslist-box{
+        width: 90%;
+        height: 70%;
+    }
+    .game-end-box .winnerslist-box h1{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .game-end-box .winnerslist-box .winners-names{
+       
+        margin-top: 20px;
+        margin-bottom: 10px;
+       display: inline;
+       overflow-y: auto;
+       
+    }
+    .game-end-box .winnerslist-box .winners-names .winner-box{
+        width: 250px;
+        height: 100px;
+
+        justify-content: space-between;
+       
+    }
+    .game-end-box .winnerslist-box .winners-names .winner-box h1{
+        font-size: 16px;
+        margin-top: 0px;
+    }
+    .game-end-box .winnerslist-box .winners-names .winner-box h3{
+        font-size: 13px;
+        font-weight: lighter;
+    }
+}

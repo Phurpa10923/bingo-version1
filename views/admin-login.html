@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login Page</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="../admin-login.css">
+</head>
+<body>
+	<div class="nav">
+		<img src="../images/logo.svg" alt="">
+		<a href="/">Home Page</a>
+	</div>
+	<div class="loading-page" id="loading-page">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
+
+   	 </div>
+
+	<div class="wrapper fadeInDown">
+		<div id="formContent">
+		  	<!-- Tabs Titles -->
+			<!-- Icon -->
+			<h1>Admin Login</h1>
+			<!-- Login Form -->
+			<form method="POST" id="login">
+			<input type="text" id="email" class="fadeIn second" name="login" placeholder="Email">
+			<input type="text" id="password" class="fadeIn third" name="login" placeholder="Password">
+			<input type="submit" class="fadeIn fourth">
+			</form>
+			<!-- Remind Passowrd -->
+			<div id="formFooter">
+				<a class="underlineHover" href="#">Forgot Password?</a>
+			</div>
+
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+	<script type="module">
+		import {
+        database,
+        ref,
+        onValue,
+        update,
+        set,
+        getAuth,
+        signInWithEmailAndPassword,
+        signOut,
+      } from "./views/firebaseConnection.js";
+		window.addEventListener("DOMContentLoaded",()=>{
+			document.getElementById("login").addEventListener("submit",function(e){
+				e.preventDefault();
+				const adminEmail=e.target.email.value;
+				const adminPassword=e.target.password.value;
+				if(adminEmail.length==0){
+					alert("Name field is empty");
+					return;
+				}
+				else if(adminPassword.length<=6){
+					window.alert("Password Should Containe more than 6-Character");
+					return;
+				}
+				console.log("Logging In")
+				document.getElementById("loading-page").style.visibility='visible';
+				const auth = getAuth();
+				signInWithEmailAndPassword(auth,adminEmail,adminPassword)
+				.then(({user})=>{
+				return user.getIdToken().then((idToken)=>{
+					return fetch("/sessionLogin",{
+						method:"POST",
+						headers:{
+							Accept:'application/json',
+							"Content-Type":"application/json",
+							"CSRF-Token":Cookies.get("XSRF-TOKEN")
+						},
+						body:JSON.stringify({idToken}),
+					});
+					});
+				}).then(()=>{
+					document.getElementById("loading-page").style.visibility='hidden';
+					window.location.replace("/admin")
+				}).catch((error)=>{
+					document.getElementById("loading-page").style.visibility='hidden';
+					alert(error)
+				});
+			});
+		});
+		
+	</script>
+</body>
+</html>

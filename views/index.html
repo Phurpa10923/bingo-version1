@@ -1,0 +1,1432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/images/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/images/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="../index.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="ticket-box" id="ticket-box">
+      <button class="close" onclick="closeTicket()">Close</button>
+      <div class="content-box">
+        <div class="search-field">
+          <input type="text" placeholder="Find a ticket" id="ticket-no" />
+
+          <button onclick="showparticularTicket(this)">Search</button><br />
+          <button onclick="showparticularTicket(this)" value="all">
+            Show All
+          </button>
+        </div>
+        <div class="result" id="result"><span>Result</span></div>
+        <div class="t-box" id="t-box">
+          <span></span>
+        </div>
+        <iv class="contact-no">
+          <span
+            >To buy tickets in your name. Contact Agent through whatsapp Number
+            given below.</span
+          >
+          <h3>Contact Agent : <span>9622988479</span></h3>
+        </iv>
+      </div>
+    </div>
+
+    <div class="container-one">
+      <div class="navigation">
+        <img src="../images/logo.svg" alt="" />
+      </div>
+
+      <div class="box-one">
+        <img src="/images/pexels-ylanite-koppens-776656.jpg" alt="" />
+
+        <div class="latest-game" data-aos="zoom-in-up">
+          <div class="game-infor">
+            <h3 id="upcoming-game-name"></h3>
+            <span id="upcoming-game-date"></span>
+            <span id="upcoming-game-time"></span>
+            <button id="upcoming-game-button">Starting Soon</button>
+            <button id="prize" value="open">Prize Info</button>
+          </div>
+          <div class="prizeinfo" id="prizeinfo">
+            <table id="table">
+              <tr>
+                <td>Full House:</td>
+                <td id="fullh-p-money"></td>
+              </tr>
+              <tr>
+                <td>2nd Full House:</td>
+                <td id="sfullh-p-money"></td>
+              </tr>
+              <tr>
+                <td>First Row :</td>
+                <td id="fr-p-money"></td>
+              </tr>
+              <tr>
+                <td>Second Row :</td>
+                <td id="sr-p-money"></td>
+              </tr>
+              <tr>
+                <td>Third Row :</td>
+                <td id="tr-p-money"></td>
+              </tr>
+              <tr>
+                <td>Four Corner :</td>
+                <td id="fc-p-money"></td>
+              </tr>
+              <tr>
+                <td>First Five :</td>
+                <td id="ff-p-money"></td>
+              </tr>
+              <tr>
+                <td>Sheet :</td>
+                <td id="s-p-money"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="our-story">
+        <h1 data-aos="fade-down-right">
+          TICKET FOR THE GAME<br /><span
+            >Ticket for the upcoming game is listed here.<br />You can contact
+            the Whatsapp number listed here to buy the ticket.<br /><br />WHITE
+            means Available<br />ORANGE means Not Available</span
+          >
+          <span style="border: 1px solid #fd7905; margin-top: 20px"
+            >Price Per Ticket :
+            <span
+              id="price-p-ticket"
+              style="width: 50%; margin: 0"
+            ></span></span
+          ><span style="margin-top: 30px"
+            >Contact Whatsapp No:<a
+              onclick="window.open('https://wa.me/message/NXRQBS633YNXD1','_blank')"
+              style="
+                color: #fd7905;
+                padding-left: 5px;
+                cursor: pointer;
+                border-bottom: 1px solid white;
+                cursor: pointer;
+              "
+              >XXXXXXXXXXX</a
+            ></span
+          >
+        </h1>
+        <div
+          class="available-ticket"
+          id="available-ticket"
+          data-aos="fade-down-left"
+          data-aos-delay="400"
+        >
+          <div class="loading-page" id="loading-page1">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+          </div>
+          <div class="ticke" id="ticke"></div>
+          <div class="partic-ticket" id="partic-ticket">
+            <div class="tic" id="tic"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-two" id="container-two">
+      <div class="instr">
+        <h1 data-aos="zoom-out-up" data-aos-delay="300">All Scheduled Games</h1>
+        <h3 data-aos="fade-up" data-aos-delay="400">
+          All the Scheduled game are listed here. To inquire about the tickets
+          of a future game, click that box.It will provide u with all the
+          available ticket.
+        </h3>
+      </div>
+
+      <div
+        class="c-box-one"
+        id="c-box-one"
+        data-aos="fade-down-left"
+        data-aos-delay="1000"
+      >
+        <div class="loading-page" id="loading-page">
+          <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom"></div>
+
+    <template>
+      <div class="gameDetails">
+        <div class="g-box-one">
+          <h3>Name</h3>
+          <span>Phurpa Tsering</span>
+        </div>
+        <div class="g-box-two">
+          <h3>Date</h3>
+          <span>2021/06/29</span>
+        </div>
+        <div class="g-box-three">
+          <h3>Time</h3>
+          <span>10:00 AM</span>
+        </div>
+        <div class="g-box-four">
+          <button id="tickets">Play</button>
+        </div>
+      </div>
+    </template>
+    <template class="ticket-con">
+      <div class="ticket">
+        <div class="ticketsvalue">
+          <div class="row-one">
+            <div class="box-1"></div>
+            <div class="box-2"></div>
+            <div class="box-3"></div>
+            <div class="box-4"></div>
+            <div class="box-5"></div>
+            <div class="box-6"></div>
+            <div class="box-7"></div>
+            <div class="box-8"></div>
+            <div class="box-9"></div>
+          </div>
+          <div class="row-two">
+            <div class="box-1"></div>
+            <div class="box-2"></div>
+            <div class="box-3"></div>
+            <div class="box-4"></div>
+            <div class="box-5"></div>
+            <div class="box-6"></div>
+            <div class="box-7"></div>
+            <div class="box-8"></div>
+            <div class="box-9"></div>
+          </div>
+          <div class="row-three">
+            <div class="box-1"></div>
+            <div class="box-2"></div>
+            <div class="box-3"></div>
+            <div class="box-4"></div>
+            <div class="box-5"></div>
+            <div class="box-6"></div>
+            <div class="box-7"></div>
+            <div class="box-8"></div>
+            <div class="box-9"></div>
+          </div>
+        </div>
+        <div class="ticketno">
+          <span>Ticket No:</span> <span class="ticket-no"></span>
+        </div>
+        <div class="sheetno">
+          <span>Sheet No:</span> <span class="sheet-no"></span>
+        </div>
+        <div class="ticketowner">
+          <span class="ticket-owner"></span>
+        </div>
+      </div>
+    </template>
+
+    <template class="box-temp" id="box-temp">
+      <div class="avail-tikcet-box"></div>
+    </template>
+
+    <div class="game-end-box" id="game-end-box">
+      <button id="closewinnerBox">close</button>
+      <div class="winnerslist-box">
+        <h1>Congratulation to the Winners...</h1>
+        <div class="winners-names">
+          <div class="winner-box">
+            <h1>Full House</h1>
+
+            <h3>Prize Money: <span id="fh-winner-prize"></span></h3>
+            <h3>Ticket No:<span id="fh-ticket-no"></span></h3>
+            <h3>Winner Name: <span id="fh-winner-name"></span></h3>
+          </div>
+          <div class="winner-box">
+            <h1>Second Full House</h1>
+            <h3>Prize Money: <span id="sfh-winner-prize"></span></h3>
+            <h3>Ticket No:<span id="sfh-ticket-no"></span></h3>
+            <h3>Winner Name: <span id="sfh-winner-name"></span></h3>
+          </div>
+          <div class="winner-box">
+            <h1>First Row</h1>
+            <h3>Prize Money: <span id="fr-winner-prize"></span></h3>
+            <h3>Ticket No:<span id="fr-ticket-no"></span></h3>
+            <h3>Winner Name: <span id="fr-winner-name"></span></h3>
+          </div>
+          <div class="winner-box">
+            <h1>Second Row</h1>
+            <h3>Prize Money: <span id="sr-winner-prize"></span></h3>
+            <h3>Ticket No:<span id="sr-ticket-no"></span></h3>
+            <h3>Winner Name: <span id="sr-winner-name"></span></h3>
+          </div>
+          <div class="winner-box">
+            <h1>Third Row</h1>
+            <h3>Prize Money: <span id="tr-winner-prize"></span></h3>
+            <h3>Ticket No:<span id="tr-ticket-no"></span></h3>
+            <h3>Winner Name: <span id="tr-winner-name"></span></h3>
+          </div>
+          <div class="winner-box">
+            <h1>First Five</h1>
+            <h3>Prize Money: <span id="ff-winner-prize"></span></h3>
+            <h3>Ticket No:<span id="ff-ticket-no"></span></h3>
+            <h3>Winner Name: <span id="ff-winner-name"></span></h3>
+          </div>
+          <div class="winner-box">
+            <h1>Sheet Winner</h1>
+            <h3>Prize Money: <span id="s-winner-prize"></span></h3>
+            <h3>Ticket No:<span id="s-ticket-no"></span></h3>
+            <h3>Winner Name: <span id="s-winner-name"></span></h3>
+          </div>
+          <div class="winner-box">
+            <h1>Four Corner Winner</h1>
+            <h3>Prize Money: <span id="fc-winner-prize"></span></h3>
+            <h3>Ticket No:<span id="fc-ticket-no"></span></h3>
+            <h3>Winner Name: <span id="fc-winner-name"></span></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module">
+      import {
+        database,
+        ref,
+        onValue,
+        update,
+        set,
+        getAuth,
+        signInWithEmailAndPassword,
+        signOut,
+      } from "./views/firebaseConnection.js";
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init();
+        const nodeRef = ref(database, "Games");
+        onValue(nodeRef, (data) => {
+          while (document.getElementById("c-box-one").lastElementChild) {
+            document
+              .getElementById("c-box-one")
+              .removeChild(
+                document.getElementById("c-box-one").lastElementChild
+              );
+          }
+          data.forEach((d) => {
+            d.forEach((snap) => {
+              var temp = document.getElementsByTagName("template")[0];
+              //var clon = temp.content.cloneNode(true);
+              var id = temp.content.querySelector(".gameDetails");
+              var clon = document.importNode(id, true);
+              document.getElementById("c-box-one").appendChild(clon);
+              clon.addEventListener("click", function () {
+                document.getElementById("ticket-box").style.visibility =
+                  "visible";
+                document.getElementById("ticket-box").style.zIndex = "10";
+                showTickets(d.key, snap.key);
+              });
+              clon.childNodes.forEach((x) => {
+                if (x.nodeType == Node.ELEMENT_NODE) {
+                  if (x.className == "g-box-one") {
+                    x.childNodes.forEach((y) => {
+                      if (y.nodeName == "SPAN") {
+                        y.textContent = snap
+                          .child("/gameDetails/gameName")
+                          .val();
+                      }
+                    });
+                  }
+                  if (x.className == "g-box-two") {
+                    x.childNodes.forEach((y) => {
+                      if (y.nodeName == "SPAN") {
+                        y.textContent = d.key;
+                      }
+                    });
+                  }
+                  if (x.className == "g-box-three") {
+                    x.childNodes.forEach((y) => {
+                      if (y.nodeName == "SPAN") {
+                        if (snap.key == "10:00") {
+                          y.textContent = "10:00 AM";
+                        } else if (snap.key == "14:00") {
+                          y.textContent = "02:00 PM";
+                        } else if (snap.key == "21:00") {
+                          y.textContent = "09:00 PM";
+                        }
+                      }
+                    });
+                  }
+                  if (x.className == "g-box-four") {
+                    x.childNodes.forEach((y) => {
+                      if (y.nodeName == "BUTTON") {
+                        if (
+                          snap.child("/gameDetails/finished").val() == false
+                        ) {
+                          if (
+                            snap.child("/gameDetails/started").val() == true
+                          ) {
+                            y.disabled = false;
+
+                            y.style.backgroundColor = "#fd7905";
+                            y.style.color = "#fff";
+                            y.style.border = "none";
+
+                            y.addEventListener("click", function () {
+                              event.stopPropagation();
+                              window.location.href =
+                                "/player/?date=" +
+                                d.key +
+                                "&time=" +
+                                snap.key +
+                                "&ticket=" +
+                                snap.child("/gameDetails/nooftickets").val();
+                            });
+                          } else {
+                            y.disabled = true;
+                            y.style.cursor = "not-allowed !important";
+                            y.style.border = "none";
+                            y.style.backgroundColor = "#ff8e2b";
+                            y.style.color = "#CACACA";
+                            y.textContent = "Starting Soon";
+                            y.addEventListener("click", function () {
+                              alert("Game has not Started yet");
+                            });
+                          }
+                        } else {
+                          y.textContent = "Winners";
+                          y.style.backgroundColor = "Black";
+                          y.style.color = "white";
+                          clon.style.backgroundColor='gray';
+                          clon.style.cursor='not-allowed';
+                          clon.removeEventListener('click',()=>{});
+                          y.addEventListener("click", function () {
+                            event.stopPropagation();
+                            document.getElementById(
+                              "game-end-box"
+                            ).style.display = "flex";
+                            document.getElementById(
+                              "game-end-box"
+                            ).style.zIndex = "100";
+
+                            document.getElementById(
+                              "fh-winner-prize"
+                            ).textContent = snap
+                              .child("/gameDetails/fhprize")
+                              .val();
+                            document.getElementById(
+                              "sfh-winner-prize"
+                            ).textContent = snap
+                              .child("/gameDetails/sfhprize")
+                              .val();
+                            document.getElementById(
+                              "fr-winner-prize"
+                            ).textContent = snap
+                              .child("/gameDetails/frprize")
+                              .val();
+                            document.getElementById(
+                              "sr-winner-prize"
+                            ).textContent = snap
+                              .child("/gameDetails/srprize")
+                              .val();
+                            document.getElementById(
+                              "tr-winner-prize"
+                            ).textContent = snap
+                              .child("/gameDetails/trprize")
+                              .val();
+                            document.getElementById(
+                              "fc-winner-prize"
+                            ).textContent = snap
+                              .child("/gameDetails/fcprize")
+                              .val();
+                            document.getElementById(
+                              "ff-winner-prize"
+                            ).textContent = snap
+                              .child("/gameDetails/ffprize")
+                              .val();
+                            document.getElementById(
+                              "s-winner-prize"
+                            ).textContent = snap
+                              .child("/gameDetails/sprize")
+                              .val();
+
+                            snap
+                              .child("/winners/Secondfullhouse/winnerJSon")
+                              .val()
+                              .forEach((d) => {
+                                const span = document.createElement("span");
+                                const spanName = document.createElement("span");
+                                span.textContent = d.winner + " - ";
+                                spanName.textContent =
+                                  snap
+                                    .child("/tickets/" + d.winner + "/owner")
+                                    .val() + " - ";
+                                document
+                                  .getElementById("sfh-ticket-no")
+                                  .appendChild(span);
+                                document
+                                  .getElementById("sfh-winner-name")
+                                  .appendChild(spanName);
+                              });
+
+                            snap
+                              .child("/winners/fullhouse/winnerJSon")
+                              .val()
+                              .forEach((d) => {
+                                const span = document.createElement("span");
+                                const spanName = document.createElement("span");
+                                span.textContent = d.winner + " - ";
+                                spanName.textContent =
+                                  snap
+                                    .child("/tickets/" + d.winner + "/owner")
+                                    .val() + " - ";
+                                document
+                                  .getElementById("fh-ticket-no")
+                                  .appendChild(span);
+
+                                document
+                                  .getElementById("fh-winner-name")
+                                  .appendChild(spanName);
+                              });
+                            snap
+                              .child("/winners/firstrow/winnerJSon")
+                              .val()
+                              .forEach((d) => {
+                                const span = document.createElement("span");
+                                const spanName = document.createElement("span");
+                                span.textContent = d.winner + " - ";
+                                spanName.textContent =
+                                  snap
+                                    .child("/tickets/" + d.winner + "/owner")
+                                    .val() + " - ";
+                                document
+                                  .getElementById("fr-ticket-no")
+                                  .appendChild(span);
+                                document
+                                  .getElementById("fr-winner-name")
+                                  .appendChild(spanName);
+                              });
+                            snap
+                              .child("/winners/secondrow/winnerJSon")
+                              .val()
+                              .forEach((d) => {
+                                const span = document.createElement("span");
+                                const spanName = document.createElement("span");
+                                span.textContent = d.winner + " - ";
+                                spanName.textContent =
+                                  snap
+                                    .child("/tickets/" + d.winner + "/owner")
+                                    .val() + " - ";
+                                document
+                                  .getElementById("sr-ticket-no")
+                                  .appendChild(span);
+                                document
+                                  .getElementById("sr-winner-name")
+                                  .appendChild(spanName);
+                              });
+                            snap
+                              .child("/winners/thirdrow/winnerJSon")
+                              .val()
+                              .forEach((d) => {
+                                const span = document.createElement("span");
+                                const spanName = document.createElement("span");
+                                span.textContent = d.winner + " - ";
+                                spanName.textContent =
+                                  snap
+                                    .child("/tickets/" + d.winner + "/owner")
+                                    .val() + " - ";
+                                document
+                                  .getElementById("tr-ticket-no")
+                                  .appendChild(span);
+                                document
+                                  .getElementById("tr-winner-name")
+                                  .appendChild(spanName);
+                              });
+
+                            snap
+                              .child("/winners/firstfive/winnerJSon")
+                              .val()
+                              .forEach((d) => {
+                                const span = document.createElement("span");
+                                const spanName = document.createElement("span");
+                                span.textContent = d.winner + " - ";
+                                spanName.textContent =
+                                  snap
+                                    .child("/tickets/" + d.winner + "/owner")
+                                    .val() + " - ";
+                                document
+                                  .getElementById("ff-ticket-no")
+                                  .appendChild(span);
+                                document
+                                  .getElementById("ff-winner-name")
+                                  .appendChild(spanName);
+                              });
+
+                            snap
+                              .child("/winners/corner/winnerJSon")
+                              .val()
+                              .forEach((d) => {
+                                const span = document.createElement("span");
+                                const spanName = document.createElement("span");
+                                span.textContent = d.winner + " - ";
+                                spanName.textContent =
+                                  snap
+                                    .child("/tickets/" + d.winner + "/owner")
+                                    .val() + " - ";
+                                document
+                                  .getElementById("fc-ticket-no")
+                                  .appendChild(span);
+                                document
+                                  .getElementById("fc-winner-name")
+                                  .appendChild(spanName);
+                              });
+                            snap
+                              .child("/winners/sheetwinner/winnerJSon")
+                              .val()
+                              .forEach((d) => {
+                                const span = document.createElement("span");
+                                const spanName = document.createElement("span");
+
+                                var skip = false;
+                                snap
+                                  .child("tickets")
+                                  .val()
+                                  .forEach((data) => {
+                                    if (
+                                      data.sheetno == d.winner &&
+                                      skip == false
+                                    ) {
+                                      span.textContent = d.winner + " - ";
+                                      spanName.textContent = data.owner + "-";
+                                      skip = true;
+                                    }
+                                  });
+
+                                document
+                                  .getElementById("s-ticket-no")
+                                  .appendChild(span);
+                                document
+                                  .getElementById("s-winner-name")
+                                  .appendChild(spanName);
+                              });
+                          });
+                        }
+                      }
+                    });
+                  }
+                }
+              });
+            });
+          });
+        });
+      });
+
+      document
+        .getElementById("closewinnerBox")
+        .addEventListener("click", function () {
+          document.getElementById("game-end-box").style.display = "none";
+          document.getElementById("game-end-box").style.zIndex = "-10";
+        });
+
+      var firstGamedate, firstgametime;
+      var nodeRef=ref(database,'Games')
+      onValue(nodeRef,(snapshot) => {
+          var least;
+          var leasttime;
+
+          snapshot.forEach((d) => {
+            d.forEach((t) => {
+              if (
+                leasttime == null &&
+                t.child("/gameDetails/finished").val() == false
+              ) {
+                leasttime = t.key;
+                least = d.key;
+              }
+            });
+          });
+
+          console.log(least + "\t" + leasttime);
+
+          if (least == null && leasttime == null) {
+            document.getElementById("upcoming-game-name").style.animation =
+              "none";
+            document.getElementById("upcoming-game-date").style.animation =
+              "none";
+            document.getElementById("upcoming-game-time").style.animation =
+              "none";
+            document.getElementById("upcoming-game-name").textContent =
+              "No Games!!";
+            document.getElementById("upcoming-game-date").textContent =
+              "dd/mm/yyyy";
+            document.getElementById("upcoming-game-time").textContent = "--:--";
+            document.getElementById("upcoming-game-button").disabled = false;
+            document.getElementById("upcoming-game-button").textContent =
+              "BE PATIENT";
+            document.getElementById(
+              "upcoming-game-button"
+            ).style.backgroundColor = "white";
+          } else {
+            firstGamedate = least;
+            firstgametime = leasttime;
+
+            console.log(firstGamedate + "\t" + firstgametime);
+            document.getElementById("upcoming-game-name").style.animation =
+              "none";
+            document.getElementById("upcoming-game-date").style.animation =
+              "none";
+            document.getElementById("upcoming-game-time").style.animation =
+              "none";
+
+            document.getElementById("fullh-p-money").textContent =
+              "Rs. " +
+              snapshot
+                .child(
+                  firstGamedate + "/" + firstgametime + "/gameDetails/fhprize"
+                )
+                .val();
+            document.getElementById("sfullh-p-money").textContent =
+              "Rs. " +
+              snapshot
+                .child(
+                  firstGamedate + "/" + firstgametime + "/gameDetails/sfhprize"
+                )
+                .val();
+            document.getElementById("fr-p-money").textContent =
+              "Rs. " +
+              snapshot
+                .child(
+                  firstGamedate + "/" + firstgametime + "/gameDetails/frprize"
+                )
+                .val();
+            document.getElementById("sr-p-money").textContent =
+              "Rs. " +
+              snapshot
+                .child(
+                  firstGamedate + "/" + firstgametime + "/gameDetails/srprize"
+                )
+                .val();
+            document.getElementById("tr-p-money").textContent =
+              "Rs. " +
+              snapshot
+                .child(
+                  firstGamedate + "/" + firstgametime + "/gameDetails/trprize"
+                )
+                .val();
+            document.getElementById("fc-p-money").textContent =
+              "Rs. " +
+              snapshot
+                .child(
+                  firstGamedate + "/" + firstgametime + "/gameDetails/fcprize"
+                )
+                .val();
+            document.getElementById("ff-p-money").textContent =
+              "Rs. " +
+              snapshot
+                .child(
+                  firstGamedate + "/" + firstgametime + "/gameDetails/ffprize"
+                )
+                .val();
+            document.getElementById("s-p-money").textContent =
+              "Rs. " +
+              snapshot
+                .child(
+                  firstGamedate + "/" + firstgametime + "/gameDetails/sprize"
+                )
+                .val();
+            document.getElementById("price-p-ticket").textContent =
+              "Rs. " +
+              snapshot
+                .child(
+                  firstGamedate +
+                    "/" +
+                    firstgametime +
+                    "/gameDetails/paypticket"
+                )
+                .val();
+
+            document.getElementById("upcoming-game-name").textContent = snapshot
+              .child(
+                firstGamedate + "/" + firstgametime + "/gameDetails/gameName"
+              )
+              .val();
+            document.getElementById("upcoming-game-date").textContent =
+              firstGamedate;
+
+            if (firstgametime == "10:00") {
+              document.getElementById("upcoming-game-time").textContent =
+                "10:00 AM";
+            } else if (firstgametime == "14:00") {
+              document.getElementById("upcoming-game-time").textContent =
+                "02:00 PM";
+            } else if (firstgametime == "21:00") {
+              document.getElementById("upcoming-game-time").textContent =
+                "09:00 PM";
+            }
+
+            if (
+              snapshot
+                .child(
+                  firstGamedate + "/" + firstgametime + "/gameDetails/started"
+                )
+                .val() == true &&
+              snapshot
+                .child(
+                  firstGamedate + "/" + firstgametime + "/gameDetails/finished"
+                )
+                .val() == false
+            ) {
+              document.getElementById("upcoming-game-button").disabled = false;
+              document.getElementById("upcoming-game-button").textContent =
+                "Play";
+              document.getElementById("upcoming-game-button").style.color =
+                "white";
+              document.getElementById(
+                "upcoming-game-button"
+              ).style.backgroundColor = "#fd7905";
+              document
+                .getElementById("upcoming-game-button")
+                .addEventListener("click", (e) => {
+                  window.location.replace(
+                    "/player/?date=" +
+                      firstGamedate +
+                      "&time=" +
+                      firstgametime +
+                      "&ticket=" +
+                      snapshot
+                        .child(
+                          firstGamedate +
+                            "/" +
+                            firstgametime +
+                            "/gameDetails/nooftickets"
+                        )
+                        .val()
+                  );
+                });
+            } else if (
+              snapshot
+                .child(
+                  firstGamedate + "/" + firstgametime + "/gameDetails/started"
+                )
+                .val() == false
+            ) {
+              document.getElementById("upcoming-game-button").disabled = true;
+              document.getElementById("upcoming-game-button").textContent =
+                "Starting Soon";
+              document.getElementById("upcoming-game-button").style.color =
+                "black";
+              document.getElementById(
+                "upcoming-game-button"
+              ).style.backgroundColor = "white";
+            }
+            nodeRef = ref(database,"Games/" + firstGamedate + "/" + firstgametime + "/tickets");
+            onValue(nodeRef,(data) => {
+                while (document.getElementById("ticke").lastElementChild) {
+                  document
+                    .getElementById("ticke")
+                    .removeChild(
+                      document.getElementById("ticke").lastElementChild
+                    );
+                }
+
+                document.getElementById("loading-page1").style.display = "none";
+                data.forEach((childdata) => {
+                  var temp = document.getElementById("box-temp");
+                  //var clon = temp.content.cloneNode(true);
+                  var id = temp.content.querySelector(".avail-tikcet-box");
+                  var clon = document.importNode(id, true);
+                  clon.textContent = childdata.key;
+
+                  clon.value = childdata.key;
+
+                  if (childdata.child("/taken").val() == true) {
+                    clon.style.backgroundColor = "#fd7905";
+                    clon.style.color = "white";
+                  }
+
+                  clon.addEventListener("click", (e) => {
+                    showTikcetbox(e.target.value);
+                  });
+
+                  document.getElementById("ticke").appendChild(clon);
+                });
+              });
+          }
+        });
+
+      document.getElementById("prize").addEventListener("click", (e) => {
+        if (e.target.value == "open") {
+          document.getElementById("prizeinfo").style.display = "flex";
+          document.getElementById("prizeinfo").style.animation =
+            "slideup 0.5s ease-in-out forwards";
+          document.getElementById("table").style.animation =
+            "fadein 0.1s 0.5s ease-in-out forwards";
+          e.target.style.borderBottom = "1px solid red";
+          e.target.value = "close";
+          e.target.textContent = "Close";
+        } else {
+          document.getElementById("prizeinfo").style.animation =
+            "slidedown 0.5s ease-in-out forwards";
+          document.getElementById("table").style.animation =
+            "fadeout 0.2s ease-in-out forwards";
+          document.getElementById("table").style.borderBottom;
+          e.target.style.borderBottom = "1px solid black";
+          e.target.value = "open";
+          e.target.textContent = "Open Prize";
+        }
+      });
+
+      function showTikcetbox(tickno) {
+        document.getElementById("partic-ticket").style.animation =
+          "POPopen 0.4s ease forwards";
+        document
+          .getElementById("partic-ticket")
+          .addEventListener("click", () => {
+            document.getElementById("partic-ticket").style.animation =
+              "POPclose 0.4s ease";
+          });
+        const nodeRef= ref(database,"Games/" + firstGamedate + "/" + firstgametime + "/tickets")
+        onValue(nodeRef,(snap) => {
+            while (document.getElementById("tic").lastElementChild) {
+              document
+                .getElementById("tic")
+                .removeChild(document.getElementById("tic").lastElementChild);
+            }
+            snap.forEach((childdata) => {
+              if (childdata.key == tickno) {
+                var temp = document.getElementsByTagName("template")[1];
+                //var clon = temp.content.cloneNode(true);
+                var id = temp.content.querySelector(".ticket");
+                var clon = document.importNode(id, true);
+
+                document.getElementById("tic").appendChild(clon);
+                clon.childNodes.forEach((x) => {
+                  if (x.nodeType == Node.ELEMENT_NODE) {
+                    if (x.nodeName == "DIV") {
+                      if (x.className == "ticketsvalue") {
+                        if (childdata.child("/taken").val() == true) {
+                          x.style.backgroundColor = "#fd7905";
+                        } else {
+                          x.style.backgroundColor = "white";
+                        }
+                        var ticketno = 0;
+                        x.childNodes.forEach((y) => {
+                          if (y.className == "row-one") {
+                            var count = 0;
+                            y.childNodes.forEach((z) => {
+                              if (z.nodeName == "DIV") {
+                                if (
+                                  childdata.child("/ticket/0/" + count).val() !=
+                                  0
+                                ) {
+                                  z.textContent = childdata
+                                    .child("/ticket/0/" + count)
+                                    .val();
+                                } else {
+                                  z.textContent == "";
+                                }
+                                count++;
+                                return;
+                              }
+                            });
+
+                            return;
+                          }
+                          if (y.className == "row-two") {
+                            var count = 0;
+                            y.childNodes.forEach((z) => {
+                              if (z.nodeName == "DIV") {
+                                if (
+                                  childdata.child("/ticket/1/" + count).val() !=
+                                  0
+                                ) {
+                                  z.textContent = childdata
+                                    .child("/ticket/1/" + count)
+                                    .val();
+                                } else {
+                                  z.textContent == "";
+                                }
+                                count++;
+                                return;
+                              }
+                            });
+                            return;
+                          }
+                          if (y.className == "row-three") {
+                            var count = 0;
+                            y.childNodes.forEach((z) => {
+                              if (z.nodeName == "DIV") {
+                                if (
+                                  childdata.child("/ticket/2/" + count).val() !=
+                                  0
+                                ) {
+                                  z.textContent = childdata
+                                    .child("/ticket/2/" + count)
+                                    .val();
+                                } else {
+                                  z.textContent == "";
+                                }
+                                count++;
+                                return;
+                              }
+                            });
+                            return;
+                          }
+                        });
+                      }
+                      if (x.className == "ticketno") {
+                        x.childNodes.forEach((y) => {
+                          if (y.className == "ticket-no") {
+                            y.textContent = childdata.key;
+                          }
+                        });
+                      }
+                      if (x.className == "sheetno") {
+                        x.childNodes.forEach((y) => {
+                          if (y.className == "sheet-no") {
+                            y.textContent = childdata.child("/sheetno").val();
+                          }
+                        });
+                      }
+                      if (x.className == "ticketowner") {
+                        x.childNodes.forEach((y) => {
+                          if (y.className == "ticket-owner") {
+                            y.textContent =
+                              "( " + childdata.child("/owner").val() + " )";
+                          }
+                        });
+                      }
+                    }
+                  }
+                });
+              }
+            });
+          });
+      }
+
+      var Colors = ["#fff703", "#0019fe", "#A020F0", "#ff3030", "#049b13"];
+      function showTickets(date, time) {
+        document.getElementById("ticket-box").setAttribute("data-date", date);
+        document.getElementById("ticket-box").setAttribute("data-time", time);
+        const nodeRef=ref(database,"Games/" + date + "/" + time + "/tickets")
+        onValue(nodeRef,(snapshot) => {
+            while (document.getElementById("t-box").lastElementChild) {
+              document
+                .getElementById("t-box")
+                .removeChild(document.getElementById("t-box").lastElementChild);
+            }
+            snapshot.forEach((childdata) => {
+              if (childdata.child("/taken").val() == false) {
+                var temp = document.getElementsByTagName("template")[1];
+                //var clon = temp.content.cloneNode(true);
+                var id = temp.content.querySelector(".ticket");
+                var clon = document.importNode(id, true);
+
+                var sheetno = childdata.child("/sheetno").val();
+
+                var colorIndex = sheetno % 5;
+
+                if (childdata.child("/taken").val() == true) {
+                  console.log("taken");
+                  clon.style.backgroundColor = "#fd7905";
+                } else {
+                  clon.style.backgroundColor = Colors[colorIndex];
+                }
+
+                document.getElementById("t-box").appendChild(clon);
+                clon.childNodes.forEach((x) => {
+                  if (x.nodeType == Node.ELEMENT_NODE) {
+                    if (x.nodeName == "DIV") {
+                      if (x.className == "ticketsvalue") {
+                        var ticketno = 0;
+                        x.childNodes.forEach((y) => {
+                          if (y.className == "row-one") {
+                            y.style.backgroundColor = Colors[colorIndex];
+                            var count = 0;
+                            y.childNodes.forEach((z) => {
+                              if (z.nodeName == "DIV") {
+                                if (
+                                  childdata.child("/ticket/0/" + count).val() !=
+                                  0
+                                ) {
+                                  z.textContent = childdata
+                                    .child("/ticket/0/" + count)
+                                    .val();
+                                } else {
+                                  z.textContent == "";
+                                }
+                                count++;
+                                return;
+                              }
+                            });
+
+                            return;
+                          }
+                          if (y.className == "row-two") {
+                            y.style.backgroundColor = Colors[colorIndex];
+                            var count = 0;
+                            y.childNodes.forEach((z) => {
+                              if (z.nodeName == "DIV") {
+                                if (
+                                  childdata.child("/ticket/1/" + count).val() !=
+                                  0
+                                ) {
+                                  z.textContent = childdata
+                                    .child("/ticket/1/" + count)
+                                    .val();
+                                } else {
+                                  z.textContent == "";
+                                }
+                                count++;
+                                return;
+                              }
+                            });
+                            return;
+                          }
+                          if (y.className == "row-three") {
+                            y.style.backgroundColor = Colors[colorIndex];
+
+                            var count = 0;
+                            y.childNodes.forEach((z) => {
+                              if (z.nodeName == "DIV") {
+                                if (
+                                  childdata.child("/ticket/2/" + count).val() !=
+                                  0
+                                ) {
+                                  z.textContent = childdata
+                                    .child("/ticket/2/" + count)
+                                    .val();
+                                } else {
+                                  z.textContent == "";
+                                }
+                                count++;
+                                return;
+                              }
+                            });
+                            return;
+                          }
+                        });
+                      }
+                      if (x.className == "ticketno") {
+                        if (colorIndex == 1) {
+                          x.style.color = "white";
+                        }
+                        x.childNodes.forEach((y) => {
+                          if (y.className == "ticket-no") {
+                            y.textContent = childdata.key;
+                          }
+                        });
+                      }
+                      if (x.className == "sheetno") {
+                        if (colorIndex == 1) {
+                          x.style.color = "white";
+                        }
+                        x.childNodes.forEach((y) => {
+                          if (y.className == "sheet-no") {
+                            y.textContent = childdata.child("/sheetno").val();
+                          }
+                        });
+                      }
+                      if (x.className == "ticketowner") {
+                        if (colorIndex == 1) {
+                          x.style.color = "white";
+                        }
+                        x.childNodes.forEach((y) => {
+                          if (y.className == "ticket-owner") {
+                            y.textContent =
+                              "( " + childdata.child("/owner").val() + " )";
+                          }
+                        });
+                      }
+                    }
+                  }
+                });
+              }
+            });
+          });
+
+        document.getElementById("result").textContent =
+          "We got " +
+          document.getElementById("t-box").childElementCount +
+          " tickets available.";
+      }
+      window.closeTicket = ()=>{
+        document.getElementById("ticket-box").style.visibility = "hidden";
+        document.getElementById("ticket-box").style.zIndex = "0";
+      }
+
+      function showparticularTicket(obj) {
+        const date = document
+          .getElementById("ticket-box")
+          .getAttribute("data-date");
+        const time = document
+          .getElementById("ticket-box")
+          .getAttribute("data-time");
+
+        if (obj.value == "all") {
+          const nodeRef = ref(database,"Games/" + date + "/" + time + "/tickets")
+          onValue(nodeRef,(snapshot) => {
+              while (document.getElementById("t-box").lastElementChild) {
+                document
+                  .getElementById("t-box")
+                  .removeChild(
+                    document.getElementById("t-box").lastElementChild
+                  );
+              }
+              snapshot.forEach((childdata) => {
+                if (childdata.child("/taken").val() == false) {
+                  var temp = document.getElementsByTagName("template")[1];
+                  //var clon = temp.content.cloneNode(true);
+                  var id = temp.content.querySelector(".ticket");
+
+                  var clon = document.importNode(id, true);
+
+                  var sheetno = childdata.child("/sheetno").val();
+
+                  var colorIndex = sheetno % 5;
+
+                  if (childdata.child("/taken").val() == true) {
+                    console.log("taken");
+                    clon.style.backgroundColor = "red";
+                  } else {
+                    clon.style.backgroundColor = Colors[colorIndex];
+                  }
+
+                  document.getElementById("t-box").appendChild(clon);
+                  clon.childNodes.forEach((x) => {
+                    if (x.nodeType == Node.ELEMENT_NODE) {
+                      if (x.nodeName == "DIV") {
+                        if (x.className == "ticketsvalue") {
+                          var ticketno = 0;
+                          x.childNodes.forEach((y) => {
+                            if (y.className == "row-one") {
+                              y.style.backgroundColor = Colors[colorIndex];
+                              var count = 0;
+                              y.childNodes.forEach((z) => {
+                                if (z.nodeName == "DIV") {
+                                  z.textContent = childdata
+                                    .child("/ticket/0/" + count)
+                                    .val();
+                                  count++;
+                                  return;
+                                }
+                              });
+
+                              return;
+                            }
+                            if (y.className == "row-two") {
+                              y.style.backgroundColor = Colors[colorIndex];
+                              var count = 0;
+                              y.childNodes.forEach((z) => {
+                                if (z.nodeName == "DIV") {
+                                  z.textContent = childdata
+                                    .child("/ticket/1/" + count)
+                                    .val();
+                                  count++;
+                                  return;
+                                }
+                              });
+                              return;
+                            }
+                            if (y.className == "row-three") {
+                              y.style.backgroundColor = Colors[colorIndex];
+
+                              var count = 0;
+                              y.childNodes.forEach((z) => {
+                                if (z.nodeName == "DIV") {
+                                  z.textContent = childdata
+                                    .child("/ticket/2/" + count)
+                                    .val();
+                                  count++;
+                                  return;
+                                }
+                              });
+                              return;
+                            }
+                          });
+                        }
+                        if (x.className == "ticketno") {
+                          x.childNodes.forEach((y) => {
+                            if (y.className == "ticket-no") {
+                              y.textContent = childdata.key;
+                            }
+                          });
+                        }
+                        if (x.className == "sheetno") {
+                          x.childNodes.forEach((y) => {
+                            if (y.className == "sheet-no") {
+                              y.textContent = childdata.child("/sheetno").val();
+                            }
+                          });
+                        }
+                        if (x.className == "ticketowner") {
+                          x.childNodes.forEach((y) => {
+                            if (y.className == "ticket-owner") {
+                              y.textContent =
+                                "( " + childdata.child("/owner").val() + " )";
+                            }
+                          });
+                        }
+                      }
+                    }
+                  });
+                }
+              });
+              document.getElementById("result").textContent =
+                "We got " +
+                document.getElementById("t-box").childElementCount +
+                " tickets available.";
+            });
+        } else {
+          const ticketno = document.getElementById("ticket-no").value;
+          const nodeRef = ref(database,"Games/" + date + "/" + time + "/tickets")
+          onValue(nodeRef,(snapshot) => {
+              while (document.getElementById("t-box").lastElementChild) {
+                document
+                  .getElementById("t-box")
+                  .removeChild(
+                    document.getElementById("t-box").lastElementChild
+                  );
+              }
+              snapshot.forEach((childdata) => {
+                if (childdata.key == ticketno) {
+                  var temp = document.getElementsByTagName("template")[1];
+                  //var clon = temp.content.cloneNode(true);
+                  var id = temp.content.querySelector(".ticket");
+
+                  var clon = document.importNode(id, true);
+
+                  var sheetno = childdata.child("/sheetno").val();
+
+                  var colorIndex = sheetno % 5;
+
+                  if (childdata.child("/taken").val() == true) {
+                    console.log("taken");
+                    clon.style.backgroundColor = "red";
+                  } else {
+                    clon.style.backgroundColor = Colors[colorIndex];
+                  }
+
+                  document.getElementById("t-box").appendChild(clon);
+                  clon.childNodes.forEach((x) => {
+                    if (x.nodeType == Node.ELEMENT_NODE) {
+                      if (x.nodeName == "DIV") {
+                        if (x.className == "ticketsvalue") {
+                          var ticketno = 0;
+                          x.childNodes.forEach((y) => {
+                            if (y.className == "row-one") {
+                              y.style.backgroundColor = Colors[colorIndex];
+                              var count = 0;
+                              y.childNodes.forEach((z) => {
+                                if (z.nodeName == "DIV") {
+                                  z.textContent = childdata
+                                    .child("/ticket/0/" + count)
+                                    .val();
+                                  count++;
+                                  return;
+                                }
+                              });
+
+                              return;
+                            }
+                            if (y.className == "row-two") {
+                              y.style.backgroundColor = Colors[colorIndex];
+                              var count = 0;
+                              y.childNodes.forEach((z) => {
+                                if (z.nodeName == "DIV") {
+                                  z.textContent = childdata
+                                    .child("/ticket/1/" + count)
+                                    .val();
+                                  count++;
+                                  return;
+                                }
+                              });
+                              return;
+                            }
+                            if (y.className == "row-three") {
+                              y.style.backgroundColor = Colors[colorIndex];
+                              var count = 0;
+                              y.childNodes.forEach((z) => {
+                                if (z.nodeName == "DIV") {
+                                  z.textContent = childdata
+                                    .child("/ticket/2/" + count)
+                                    .val();
+                                  count++;
+                                  return;
+                                }
+                              });
+                              return;
+                            }
+                          });
+                        }
+                        if (x.className == "ticketno") {
+                          x.childNodes.forEach((y) => {
+                            if (y.className == "ticket-no") {
+                              y.textContent = childdata.key;
+                            }
+                          });
+                        }
+                        if (x.className == "sheetno") {
+                          x.childNodes.forEach((y) => {
+                            if (y.className == "sheet-no") {
+                              y.textContent = childdata.child("/sheetno").val();
+                            }
+                          });
+                        }
+                        if (x.className == "ticketowner") {
+                          x.childNodes.forEach((y) => {
+                            if (y.className == "ticket-owner") {
+                              y.textContent =
+                                "( " + childdata.child("/owner").val() + " )";
+                            }
+                          });
+                        }
+                      }
+                    }
+                  });
+                }
+              });
+              if (document.getElementById("t-box").childElementCount == 0) {
+                document.getElementById("result").textContent =
+                  "The searched ticket is not available";
+                document.getElementById("ticket-no").value = "";
+              } else {
+                document.getElementById("result").textContent =
+                  "It's Available";
+              }
+            });
+        }
+      }
+    </script>
+  </body>
+</html>
